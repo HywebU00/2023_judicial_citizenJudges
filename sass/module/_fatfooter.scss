@@ -3,7 +3,7 @@
   padding-bottom: 1em;
   margin: 0 auto;
   // background: $fatFooterBgColor;
-  background: url('../../images/customize_img/footer_bg.jpg') center center;
+  background: url('../../images/customize_img/footer_bg.jpg') bottom center;
   background-size: cover;
   .container {
     overflow: hidden;
@@ -42,6 +42,7 @@
     &:hover,
     &:focus {
       background: rgba(0, 0, 0, 0.3);
+      border-radius: 1rem;
       color: #fff;
       text-decoration: none;
       cursor: pointer;
@@ -60,7 +61,8 @@
     overflow: hidden;
     display: block;
     position: relative;
-    padding: 8em 0 0 2em;
+    // padding: 8em 0 0 2em;
+    padding: 8em 0 0 0;
     box-sizing: border-box;
     @include screen('mobile') {
       padding: 7em 0.5em 1em;
@@ -74,7 +76,9 @@
       li {
         flex-grow: 1;
         flex-shrink: 1;
-        flex-basis: 16%;
+        // flex-basis: 16%;
+        flex-basis: 12.5%;
+        // margin: 0 0.5rem;
         box-sizing: border-box;
         @include screen('mobile') {
           flex: 1 1 90%;
@@ -93,6 +97,7 @@
         ul {
           display: block;
           margin: 0;
+
           padding: 0 1em 0 0;
           transition: height 0.5s;
           @include screen('mobile') {
@@ -101,9 +106,19 @@
           }
           li {
             // flex: 0 0 100%;
+
             width: auto;
             margin-right: 0.5em;
             display: block;
+            padding-left: 0.5rem;
+            position: relative;
+            &::before {
+              position: absolute;
+              content: ' - ';
+              color: #fff;
+              top: 6px;
+              left: 0px;
+            }
             @include screen('mobile') {
               display: inline-block;
             }
@@ -117,6 +132,7 @@
               line-height: 1.5em;
               padding: 0.5em 0;
               background: none;
+              padding-left: 0.5rem;
               &:hover {
                 color: $colorLight;
               }

@@ -6,11 +6,11 @@
 $colorPrimary: #595757; //主色
 $colorSecondary: #2ad386; //輔色
 $colorLight: #f7924d; //點綴
-$colorLink: #00a4f9; //連結
+$colorLink: #1085f9; //連結
 $colorImportant: #eb0202; //重要
 $colorInfo: #f2f2e9;
 // 但注意真實顏色與語意的關聯必須易於辨識
-$colorBlue: #0066cc;
+$colorBlue: #4ea3f5; // #0066cc;
 $colorGreen: #298729;
 $colorOrange: #d04500;
 $colorRed: #d30000;
@@ -21,9 +21,10 @@ $colorDark: #333333;
 $colorHr: #666; //hr顏色
 $colorWord: #222; //一般字的顏色
 $btnWordColor: #222; //按鈕字的顏色
+$colorBrown: #553929;
 // 連結顏色
 // $aColor: #00a4f9;
-$aColor: lighten($colorPrimary, 10%);
+$aColor: lighten($colorSecondary, 10%);
 $aHover: mix($aColor, #000, 90%);
 $aFocus: mix($aColor, #fff, 90%);
 // 表單focus顏色

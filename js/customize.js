@@ -85,21 +85,21 @@ accordionFunction({
   });
 
   //廣告輪播
-  const adSwiper = new Swiper('.adSlider .swiper', {
+  const linkSwiper = new Swiper('.linkSlider .swiper', {
     slidesPerView: 5,
     spaceBetween: 30,
     loop: false,
     // 切換點
     pagination: {
-      el: '.adSlider .swiperDots',
+      el: '.linkSlider .swiperDots',
       bulletElement: 'button',
       clickable: true,
     },
     // 切換箭頭
     navigation: {
-      nextEl: '.adSlider .nextSlider', //自行設定樣式
-      prevEl: '.adSlider .prevSlider', //自行設定樣式
-      disabledClass: '.adSlider swiperArrow-disabled', //不可點選樣式
+      nextEl: '.linkSlider .nextSlider', //自行設定樣式
+      prevEl: '.linkSlider .prevSlider', //自行設定樣式
+      disabledClass: '.linkSlider swiperArrow-disabled', //不可點選樣式
     },
     breakpoints: {
       100: {
@@ -109,7 +109,7 @@ accordionFunction({
         slidesPerView: 3,
       },
       1000: {
-        slidesPerView: 4,
+        slidesPerView: 5,
       },
     },
   });
@@ -164,6 +164,48 @@ accordionFunction({
     lazy: true,
     thumbs: {
       swiper: navSlider, //設定指向到哪個swiper，使用另一個設定的參數
+    },
+  });
+
+  // videoSlider 推薦影音
+  const videoSlider = new Swiper('.videoSlider .swiper', {
+    slidesPerView: 1,
+    loop: false,
+    spaceBetween: 20,
+    height: 300,
+    // 切換箭頭
+    navigation: {
+      nextEl: '.videoSlider .nextSlider', //自行設定樣式
+      prevEl: '.videoSlider .prevSlider', //自行設定樣式
+      disabledClass: 'swiperArrow-disabled', //不可點選樣式
+    },
+  });
+
+  // courtSlider 國民法官地院圖片
+  const courtSlider = new Swiper('.courtSlider .swiper', {
+    slidesPerView: 1,
+    loop: false,
+    spaceBetween: 20,
+    height: 300,
+    // 切換箭頭
+    navigation: {
+      nextEl: '.courtSlider .nextSlider', //自行設定樣式
+      prevEl: '.courtSlider .prevSlider', //自行設定樣式
+      disabledClass: 'swiperArrow-disabled', //不可點選樣式
+    },
+  });
+
+  // courtSlider 國民法官知識＋
+  const knowledgeSlider = new Swiper('.knowledgeSlider .swiper', {
+    slidesPerView: 1,
+    loop: false,
+    spaceBetween: 20,
+    height: 300,
+    // 切換箭頭
+    navigation: {
+      nextEl: '.knowledgeSlider .nextSlider', //自行設定樣式
+      prevEl: '.knowledgeSlider .prevSlider', //自行設定樣式
+      disabledClass: 'swiperArrow-disabled', //不可點選樣式
     },
   });
 })();

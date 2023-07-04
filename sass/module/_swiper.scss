@@ -91,7 +91,9 @@
   cursor: pointer;
   top: 50%;
   transform: translateY(-50%);
-  padding: 15px 10px;
+  // padding: 15px 10px;
+
+  padding-bottom: 10px;
   margin: 0;
   border-radius: 0;
   background: rgba(255, 255, 255, 0.4);
@@ -99,10 +101,14 @@
   z-index: 9;
   &::before {
     content: '';
-    width: 20px;
-    height: 30px;
+    // width: 20px;
+    // height: 30px;
     display: block;
-    background: url('../vendor/swiper/ar.svg') center no-repeat;
+    width: 40px;
+    height: 55px;
+    // background: url('../vendor/swiper/ar.svg') center no-repeat;
+    background: url('../images/customize_img/swiper_ar.png') center no-repeat;
+    background-size: contain;
   }
   &.prevSlider {
     left: 0px;

@@ -1,0 +1,18 @@
+.bannerSlider + .swiperDots {
+  button.swiper-pagination-bullet {
+    background: $colorInfo;
+    height: 2.5px;
+    border-radius: 1px;
+    width: 42px;
+    opacity: 1;
+  }
+  button.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: $colorSecondary;
+  }
+}
+.menuOverlay {
+  background: RGBA(0, 0, 0, 0);
+  @include screen('mobile') {
+    background: RGBA(0, 0, 0, 0.5);
+  }
+}
