@@ -395,7 +395,7 @@ function searchTypeB() {
       windowWidth = window.outerWidth;
       webSearch.removeAttribute('style');
       const observer = new ResizeObserver(function (entries) {
-        console.log(entries[0].contentRect.width);
+        // console.log(entries[0].contentRect.width);
         if (entries[0].contentRect.width <= 767) {
           !webSearchBtn.classList.contains('active') && webSearchBtn.classList.add('active');
           !webSearch.classList.contains('mobile') && webSearch.classList.add('mobile');

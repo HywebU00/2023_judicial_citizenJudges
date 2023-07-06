@@ -208,4 +208,76 @@ accordionFunction({
       disabledClass: 'swiperArrow-disabled', //不可點選樣式
     },
   });
+
+  //快速按鈕 功能列ＪＳ
+  const docBtn = document.querySelectorAll('.quickDot a');
+  function gotoSection() {
+    let clickHref;
+    let clickSection;
+    let scrollPx;
+    let top;
+    let currentParent;
+    docBtn.forEach((i) => {
+      i.addEventListener('click', (e) => {
+        e.preventDefault();
+        clickHref = i.dataset.href;
+        clickSection = document.querySelector(`#${clickHref}`);
+        // i.parentElement.classList.add('active');
+        //獲取元素到網頁頂部高度
+        function getTop(el) {
+          top = el.offsetTop;
+          currentParent = el.offsetParent;
+          while (currentParent != null) {
+            top += currentParent.offsetTop;
+            currentParent = currentParent.offsetParent;
+          }
+          return top;
+        }
+
+        getTop(clickSection);
+        //扣除header覆蓋的高度
+        scrollPx = top - 60;
+        window.scrollTo({
+          top: scrollPx,
+          behavior: 'smooth',
+        });
+      });
+    });
+  }
+
+  function btnListActive() {
+    const quickSection = document.querySelectorAll('.quickSection');
+    const quickBtnList = document.querySelectorAll('.quickDot li');
+
+    let itemId;
+    let activeBtn;
+    quickSection.forEach((i) => {
+      itemId = i.id;
+
+      itemBtn = document.querySelector(`[data-href=${itemId}]`).parentElement;
+
+      gsap.to(`#${itemId}`, {
+        scrollTrigger: {
+          trigger: `#${itemId}`, //觸及到的目標
+          start: 'top 20%',
+          end: 'bottom 20%',
+          // markers: true, // 區間標註
+          toggleClass: { targets: itemBtn, className: 'active' },
+        },
+      });
+      gsap.to(`#${itemId}`, {
+        scrollTrigger: {
+          trigger: `#${itemId}`, //觸及到的目標
+          start: 'top 20%',
+          end: 'bottom 20%',
+          // markers: true, // 區間標註
+          toggleClass: { targets: `#${itemId}`, className: 'active' },
+        },
+      });
+    });
+  }
+  if (docBtn !== null) {
+    gotoSection();
+    btnListActive();
+  }
 })();

@@ -1,0 +1,161 @@
+.spCard {
+  .card {
+    padding-bottom: 7rem;
+    position: relative;
+
+    > div {
+      min-height: 11.25rem;
+      border-radius: 0 2rem 2rem 2rem;
+      background-color: #fff;
+    }
+    &.info {
+      > div {
+        border: 3px solid $colorLight;
+        padding: 1.5rem;
+      }
+    }
+    &.step1,
+    &.step2,
+    &.step3 {
+      > div {
+        display: flex;
+        h3 {
+          border-radius: 0 0 0 2rem;
+          min-width: 18.75rem;
+          width: 18.6rem;
+          margin: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        left: 9.3rem;
+        width: 10px;
+        height: 60px;
+        bottom: 25px;
+        background-color: $colorGray;
+        border-radius: 6px;
+      }
+    }
+
+    &.step1 {
+      h3 {
+        background-color: $colorBlueLight;
+      }
+    }
+    &.step2 {
+      h3 {
+        background-color: $colorSecondary;
+      }
+    }
+    &.step3 {
+      h3 {
+        background-color: $colorLight;
+      }
+    }
+  }
+  &.active {
+    .card {
+      > div {
+        position: relative;
+        &::after {
+          content: '';
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          width: 100%;
+          position: absolute;
+          border-radius: 0 2rem 2rem 2rem;
+          box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+        }
+        h3 {
+          position: relative;
+          &::before {
+            content: '';
+            position: absolute;
+            background: url(../images/customize_img/active_tag.png) no-repeat center top;
+            background-size: contain;
+            height: 60px;
+            width: 100%;
+            top: 10px;
+          }
+        }
+      }
+      &.step1 {
+        > div {
+          box-shadow: $colorBlueLight 0px 1px 3px, $colorBlueLight 0px 0px 0px 2px;
+        }
+      }
+      &.step2 {
+        > div {
+          box-shadow: $colorSecondary 0px 1px 3px, $colorSecondary 0px 0px 0px 2px;
+        }
+      }
+      &.step3 {
+        > div {
+          box-shadow: $colorLight 0px 1px 3px, $colorLight 0px 0px 0px 2px;
+        }
+      }
+    }
+  }
+}
+.sp {
+  background: url(../images/customize_img/bg_icon.png) center 20vh no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+  .quickDot {
+    position: fixed;
+    right: 0;
+    top: 15rem;
+    ul {
+      list-style: none;
+      padding-left: 0;
+      margin-right: 2rem;
+      li {
+        height: 30px;
+        width: 30px;
+        margin-bottom: 0.75rem;
+        a {
+          position: relative;
+          display: block;
+          width: 30px;
+          height: 30px;
+          &::before {
+            width: 4px;
+            border-radius: 2px;
+            height: 30px;
+            background-color: lighten($colorPrimary, 30%);
+            content: '';
+            position: absolute;
+            left: 1rem;
+          }
+        }
+        span {
+          display: none;
+        }
+      }
+      .active {
+        a {
+          &::before {
+            background-color: $colorSecondary;
+          }
+        }
+      }
+    }
+  }
+  .centerBlock {
+    .spCard {
+      &:last-child {
+        .card {
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

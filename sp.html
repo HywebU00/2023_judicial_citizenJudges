@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+  <meta name="robots" content="noindex" />
+  <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HyUI kit</title>
+
+  <!-- 燈箱fancybox -->
+  <link rel="stylesheet" type="text/css" href="vendor/fancybox/jquery.fancybox.min.css" />
+  <!-- style css -->
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- favicon -->
+  <link href="images/favicon.png" rel="icon" type="image/x-icon" />
+</head>
+
+<body>
+  <!-- 直接跳主內容區 -->
+  <a class="goCenter" href="#center" tabindex="1">按Enter到主內容區</a>
+  <!-- wrapper Start -->
+  <div class="wrapper">
+    <!-- header Start -->
+    <header class="header typeB">
+      <div class="container">
+        <a class="accessKey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
+        <!-- navigation Start -->
+        <nav class="navigation" role="navigation" aria-label="Site">
+          <!-- 新增div navList -->
+          <div class="navList">
+            <ul>
+              <li><a href="#">回首頁</a></li>
+              <li><a href="#">網站導覽</a></li>
+              <li><a href="#">地院專區</a></li>
+              <li><a href="#">回司法院</a></li>
+            </ul>
+          </div>
+          <div class="submenuBox">
+
+            <div class="webSearchBtn"><button title="網站搜尋">網站搜尋</button></div>
+          </div>
+        </nav>
+        <!-- navigation End -->
+        <h1>
+          <a href="index.html"><img src="images/logo.png" alt="網站標題" /></a>
+        </h1>
+        <!-- Search Start -->
+        <div class="webSearch typeB" role="search">
+          <div class="content">
+            <div class="formGrp">
+              <label for="mustSameAsId">搜尋</label>
+              <input name="username" id="mustSameAsId" type="text" placeholder="請輸入文字" accesskey="S" title="請輸入文字" aria-label="搜尋網站內容" />
+              <button type="button" class="btn btnSearch">查詢</button>
+            </div>
+            <div class="btnGrp">
+              <button type="button" class="btn">進階搜尋</button>
+            </div>
+            <div class="keywordHot">
+              <ul>
+                <li><a href="#">熱門熱門</a></li>
+                <li><a href="#">查詢</a></li>
+                <li><a href="#">字詞三</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Search End -->
+        <!-- noscript -->
+        <noscript>
+          您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結
+          <a href="#">網站導覽</a>
+        </noscript>
+        <!-- menu Start -->
+        <nav class="menu mainMenu" role="navigation" aria-label="About page">
+          <ul>
+            <li>
+              <a href="#">第一層選單</a>
+              <ul>
+                <li><a href="#">第二層選單</a></li>
+                <li><a href="#">第二層選單</a></li>
+                <li><a href="#">第二層選單</a></li>
+                <li><a href="#">第二層選單</a></li>
+              </ul>
+            </li>
+            <li><a href="http://www.google.com">第一層有連結</a></li>
+            <li>
+              <a href="http://www.google.com">第一層有連結</a>
+              <ul>
+                <li><a href="http://www.google.com">第二層有連結</a></li>
+                <li><a href="#">第二層選單</a></li>
+                <li><a href="#">第二層選單</a></li>
+                <li><a href="#">第二層選單</a></li>
+                <li>
+                  <a href="#">第二層選單</a>
+                  <ul>
+                    <li><a href="http://www.google.com">第三層有連結</a></li>
+                    <li><a href="#">第三層選單</a></li>
+                    <li><a href="#">第三層選單</a></li>
+                    <li><a href="#">第三層選單</a></li>
+                    <li><a href="#">第三層選單</a></li>
+                    <li><a href="#">第三層選單</a></li>
+                    <li><a href="#">第三層選單</a></li>
+                    <li><a href="#">第三層選單</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">第二層選單</a></li>
+                <li><a href="#">第二層選單</a></li>
+                <li><a href="#">第二層選單</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">第一層選單</a>
+              <ul>
+                <li><a href="#">第二層選單</a></li>
+                <li><a href="#">第二層選單</a></li>
+                <li>
+                  <a href="http://www.google.com">第二層有連結</a>
+                  <ul>
+                    <li>
+                      <a href="http://www.google.com">第三層選單有下層</a>
+                      <ul>
+                        <li><a href="#">第四層選單</a></li>
+                        <li><a href="#">第四層選單</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="http://www.google.com">第三層選單有連結</a>
+                    </li>
+                    <li><a href="#">第三層選單</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">第二層選單</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">第一層選單</a>
+              <ul>
+                <li><a href="#">第二層選單</a></li>
+                <li><a href="#">第二層選單</a></li>
+                <li><a href="#">第二層選單</a></li>
+                <li><a href="#">第二層選單</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">第一層選單</a>
+              <ul>
+                <li><a href="#">第二層選單</a></li>
+                <li><a href="#">第二層選單</a></li>
+                <li>
+                  <a href="http://www.google.com">第二層有連結</a>
+                  <ul>
+                    <li>
+                      <a href="http://www.google.com">第三層選單有下層</a>
+                      <ul>
+                        <li><a href="#">第四層選單</a></li>
+                        <li><a href="#">第四層選單</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="http://www.google.com">第三層選單有連結</a>
+                    </li>
+                    <li><a href="#">第三層選單</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">第二層選單</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <!-- menu End -->
+      </div>
+    </header>
+    <!-- header End -->
+    <!-- main Start -->
+    <main id="center" class="main innerPage sp">
+      <!-- 內頁新增一個classname-->
+      <a class="accessKey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
+      <div class="container">
+        <!-- 主要內容區 -->
+        <div class="centerBlock">
+          <!-- breadcrumb路徑 -->
+          <nav aria-label="Breadcrumb" class="breadcrumb">
+            <ul>
+              <li><a href="#">首頁</a></li>
+              <li><a href="#">節點</a></li>
+              <li aria-current="page">節點</li>
+            </ul>
+          </nav>
+          <!-- h2節點 -->
+          <h2 class="title">國民法官服務臺</h2>
+
+          <!-- SP Start -->
+          <!-- submenu -->
+          <!-- 國民法官的職權區塊 start -->
+          <section class="spCard ">
+            <div class="card info">
+              <div class="">
+                <ul>
+                  <li>
+                    <h3>國民法官的職權</h3>
+                    <span class="txt">1.依法執行審判職務。2.全程參與審判程序。3.請求訊問/詢問。4.提出/請求釋疑。5.與法官共同評議作</span>
+                  </li>
+                  <li>
+                    <h3>國民法官的義務</h3>
+                    <span class="txt">1.公平審判義務。2.保密義務。3.到場執行職務義務。4.聽從訴訟指揮及遵守法庭秩序義務。</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <!-- 國民法官的職權區塊 end -->
+          <!-- 成為備選國民法官 start -->
+          <section class="spCard quickSection  active" id="sp_judge">
+            <div class="card step1">
+              <div class="">
+                <h3>成為備選國民法官</h3>
+                <ul>
+                  <li>
+                    <a href="#">
+                      <span>於前一年造具備選國民法官名冊</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span>誰可以成為國民法官?</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span>誰不能成為國民法官?</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span>誰可以拒絕成為國民法官?</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <!-- 成為備選國民法官 end -->
+
+          <!-- 成為候選國民法官 start -->
+          <section class="spCard quickSection" id="sp_candidate">
+            <div class="card step1 ">
+              <div class="">
+                <h3>成為候選國民法官</h3>
+                <ul>
+                  <li>
+                    <img src="" alt="">
+                    <span>
+                      <a href="#">
+                        <span>抽選候選國民法官通知於選任期日到庭</span>
+                      </a>
+                      <span class="txt">抽選候選國民法官通知於選任期日到庭 審理案件前，法院會隨機從複選名冊抽出候選國民法官，並通知參加選任程序。</span>
+                    </span>
+                  </li>
+                  <li>
+                    <img src="" alt="">
+                    <span>
+                      <a href="#">
+                        <span>回填調查表及除名通知</span>
+                      </a>
+                      <span class="txt">如確認不具資格或有正當理由拒絕，會予以除名並通知不用到庭參加選任程
+                        序。</span>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <!-- 成為候國民法官 end -->
+          <!-- 參與選任程序 start -->
+          <section class="spCard  quickSection" id="sp_program">
+            <div class="card step1">
+              <div class="">
+                <h3>參與選任程序</h3>
+                <ul>
+                  <li>
+                    <a href="#">
+                      <span>詢問候選國民法官</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span>隨機抽選出國民法官</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span>備位國民法官</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span>詢選任期日當天我要做什麼?</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span>候選國民法官有什麼義務?</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span>候選國民法官</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <!--參與選任程序 end -->
+          <!-- 宣示與審前說明start -->
+          <section class="spCard  quickSection" id="sp_caption">
+            <div class="card step2">
+              <div>
+                <h3>宣示與審前說明</h3>
+                <ul>
+                  <li>
+                    <a href="#">
+                      <span>宣誓：國民法官表明會依法公正、誠實的審理案件</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span>審前說明由審判長向國民法官說明法律原則及審判程序</span>
+                    </a>
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+          </section>
+          <!--宣示與審前說明 end -->
+          <!-- 審判程序開始 start -->
+          <section class="spCard quickSection" id="sp_programStart">
+            <div class="card step2 ">
+              <div>
+                <h3>審判程序開始</h3>
+                <ul>
+                  <li>
+                    <a href="#">
+                      <span>由書記官朗讀案由、檢察官陳述起訴要旨、審判長權利告知</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <!--審判程序開始 end -->
+          <!-- 開審陳述與證據調查 start -->
+          <section class="spCard quickSection" id="sp_statement">
+            <div class="card step2 ">
+              <div>
+                <h3>開審陳述與證據調查</h3>
+                <ul>
+                  <li>
+                    <a href="#">
+                      <span>由檢察官及辯護人說明舉證計劃，也就是接下來會用什麼證據證明各
+                        自的主張
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span>調查證據由檢察官及辯護人在法庭內展現可證明自己主張的證據(證人
+                        、鑑定人、書證、物證)
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <!--開審陳述與證據調查 end -->
+          <!-- 言詞辯論 start -->
+          <section class="spCard  quickSection" id="sp_debate">
+            <div class="card step3">
+              <div class=>
+                <h3>言詞辯論</h3>
+                <ul>
+                  <li>
+                    <a href="#">
+                      <span>檢察官、辯護人分別辯論被告有沒有罪、犯什麼罪、要判多重的刑。
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span>被害人或其家屬陳述意見，被告最後陳述後辯論終結
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <!--言詞辯論 end -->
+          <!-- 評議討論 start -->
+          <section class="spCard quickSection" id="sp_discuss">
+            <div class="card  step3">
+              <div>
+                <h3>評議討論</h3>
+                <ul>
+                  <li>
+                    <a href="#">
+                      <span>國民法官與法官共同討論後作成判決</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span>國民法官法庭如何做出判決?</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span>審判過程中要注意什麼?</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <!--評議討論 end -->
+          <!-- 宣示判決 start -->
+          <section class="spCard quickSection" id="sp_judgment">
+            <div class="card step3 ">
+              <div>
+                <h3>宣示判決</h3>
+                <ul>
+                  <li>
+                    <a href="#">
+                      <span>由審判長宣示判決，國民法官與備位國民法官的任務完成</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <!--宣示判決 end -->
+          <!-- SP End -->
+        </div>
+      </div>
+      <!-- 快速按鈕列 start -->
+      <div class="quickDot">
+        <ul>
+          <li class="active"><a href="#" title="成為國民法官" data-href="sp_judge"><span>成為國民法官</span></a></li>
+          <li><a href="#" title="成為候選國民法官" data-href="sp_candidate"><span>成為候選國民法官</span></a></li>
+          <li><a href="#" title="參與選任程序" data-href="sp_program"><span>參與選任程序</span></a></li>
+          <li><a href="#" title="宣示與審前說明" data-href="sp_caption"><span>宣示與審前說明</span></a></li>
+          <li><a href="#" title="審判程序開始" data-href="sp_programStart"><span>審判程序開始</span></a></li>
+          <li><a href="#" title="開審陳述與證據調查" data-href="sp_statement"><span>開審陳述與證據調查</span></a></li>
+          <li><a href="#" title="言詞辯論" data-href="sp_debate"><span>言詞辯論</span></a></li>
+          <li><a href="#" title="評議討論" data-href="sp_discuss"><span>評議討論</span></a></li>
+          <li><a href="#" title="宣示判決" data-href="sp_judgment"><span>宣示判決</span></a></li>
+        </ul>
+      </div>
+      <!-- 快速按鈕列 end -->
+    </main>
+    <!-- fatFooter Start -->
+    <section class="fatFooter">
+      <div class="container">
+        <button type="button" name="展開選單/OPEN" aria-label="導覽選單展開/收合" class="btn btnFatFooter">收合</button>
+        <nav>
+          <ul>
+            <li>
+              <a href="#">關於本局</a>
+              <ul>
+                <li><a href="#">本局沿革</a></li>
+                <li><a href="#">本局願景</a></li>
+                <li><a href="#">組織介紹</a></li>
+                <li><a href="#">本局願景</a></li>
+                <li><a href="#">局處執掌</a></li>
+                <li><a href="#">重大政策</a></li>
+                <li><a href="#">施政重點</a></li>
+                <li><a href="#">本局位置</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">訊息公告</a>
+              <ul>
+                <li><a href="#">本局公告</a></li>
+                <li><a href="#">環保署公告</a></li>
+                <li><a href="#">環境用藥公告</a></li>
+                <li><a href="#">環保專案成果報告</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">業務專區</a>
+              <ul>
+                <li><a href="#">化學物質</a></li>
+                <li><a href="#">毒性化學物質</a></li>
+                <li><a href="#">危害性化學物質災害防救</a></li>
+                <li><a href="#">環境用藥</a></li>
+                <li><a href="#">石綿危害資訊</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">便民服務</a>
+              <ul>
+                <li><a href="#">線上服務</a></li>
+                <li><a href="#">教育宣導</a></li>
+                <li><a href="#">影音專區</a></li>
+                <li><a href="#">下載專區</a></li>
+                <li><a href="#">常見問答</a></li>
+                <li><a href="#">相關連結</a></li>
+                <li><a href="#">訂閱電子報</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">政府資訊公開</a>
+              <ul>
+                <li><a href="#">行政院環境保護署資訊公開要點</a></li>
+                <li><a href="#">預算及會計月報</a></li>
+                <li><a href="#">性別平等專區</a></li>
+                <li><a href="#">人權專區</a></li>
+                <li><a href="#">環境統計資料庫</a></li>
+                <li><a href="#">業務標準作業流程</a></li>
+                <li><a href="#">行政院環保署Open Data資料集</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">法規專區</a>
+              <ul>
+                <li><a href="#">主管法規查詢系統</a></li>
+                <li><a href="#">全國法規資料庫</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+    <!-- fatFooter End -->
+    <!-- footer Start-->
+    <footer>
+      <div class="container">
+        <a class="accessKey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a>
+        <div class="footerLogo">
+          <img src="images/logo.png" alt="" class="imgResponsive" />
+        </div>
+        <div class="footerInfo">
+          <ul class="footerLink">
+            <li><a href="javascript:;">隱私權政策</a></li>
+            <li><a href="javascript:;">網站安全政策</a></li>
+            <li><a href="javascript:;">政府網站資料開放宣告</a></li>
+          </ul>
+          <p class="Copyright">Hyweb Technology Co., Ltd.© 2015 All Rights Reserved</p>
+          <p>
+            總公司：新竹縣竹北市台元一街8號5樓之6TEL：03-5601296 <br />
+            台北分公司：台北市重慶南路二段51號5樓 TEL：02-2395-6966 <br />
+            台中分公司：台中市西屯區臺灣大道三段658號6樓A1 TEL：04-2706-3968
+            <br />
+            高雄分公司：高雄市新興區中正三路55號26樓之5 TEL：07-2223606
+          </p>
+          <span class="update">更新日期:<em>2018/01/01</em></span>
+          <span class="counter">累計瀏覽人次:<em>46476653</em></span>
+        </div>
+        <div class="footerIcon">
+          <a target="_blank" href="javascript:;" title="另開視窗">
+            <img src="images/basic/accessibility.jpg" alt="" />
+          </a>
+          <a target="_blank" href="javascript:;" title="我的e政府,另開新視窗">
+            <img src="images/basic/egov.png" alt="" />
+          </a>
+        </div>
+      </div>
+    </footer>
+    <!-- footer End -->
+  </div>
+  <a href="javascript:;" class="scrollToTop" role="button">回頁首</a>
+
+  <!-- lazyload -->
+  <script src="vendor/lazyload/lazyload.js"></script>
+  <!-- picturefill -->
+  <script src="vendor/picturefill/picturefill.min.js" async></script>
+  <!-- fancybox -->
+  <script src="vendor/fancybox/fancybox.js"></script>
+  <!-- swiper -->
+  <script src="vendor/swiper/swiper-bundle.min.js"></script>
+  <!-- gsap -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script> -->
+  <!-- main js-->
+  <script src="js/main.js"></script>
+  <!-- js -->
+  <script src="js/customize.js"></script>
+</body>
+
+</html>
