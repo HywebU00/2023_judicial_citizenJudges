@@ -180,7 +180,7 @@
       }
     }
     .caption {
-      padding-top: 1em;
+      // padding-top: 1em;
       color: $colorDark;
     }
   }
@@ -340,7 +340,8 @@ body {
       &:hover,
       &:focus-visible {
         .title {
-          color: #0094e0;
+          // color: #0094e0;
+          color: darken($colorSecondary, 20%);
           cursor: pointer;
         }
       }
@@ -949,6 +950,7 @@ body {
   }
   .knowledgeSlider {
     .swiper-slide {
+      padding: 4px;
       a {
         display: flex;
         align-items: center;

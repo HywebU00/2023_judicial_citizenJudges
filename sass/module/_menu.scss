@@ -100,7 +100,8 @@
         & > a {
           // color: $aHover;
           &:after {
-            border: 2px solid $aHover;
+            border: 2px solid darken($colorSecondary, 20%);
+            // border: 2px solid $aHover;
             border-bottom: none;
             border-left: none;
           }
@@ -140,7 +141,7 @@
             &:hover,
             &:focus-visible {
               color: #fff;
-              background: $aHover;
+              background: darken($colorSecondary, 20%); //$aHover;
             }
           }
         }
@@ -153,6 +154,7 @@
             &:hover,
             &:focus-visible {
               background: $colorPrimary;
+              color: #fff;
             }
             &:after {
               content: '';

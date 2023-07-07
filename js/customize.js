@@ -67,6 +67,13 @@ accordionFunction({
   const mpSlider = new Swiper('.mpSlider .swiper', {
     slidesPerView: 1,
     loop: false,
+    autoplay: true,
+    effect: 'fade',
+    speed: 1500,
+    fadeEffect: {
+      crossFade: true,
+    },
+
     // 切換點
     pagination: {
       el: '.mpSlider .swiperDots',
@@ -253,9 +260,7 @@ accordionFunction({
     let activeBtn;
     quickSection.forEach((i) => {
       itemId = i.id;
-
       itemBtn = document.querySelector(`[data-href=${itemId}]`).parentElement;
-
       gsap.to(`#${itemId}`, {
         scrollTrigger: {
           trigger: `#${itemId}`, //觸及到的目標

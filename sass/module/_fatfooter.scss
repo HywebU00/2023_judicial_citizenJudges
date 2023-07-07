@@ -70,6 +70,7 @@
     ul {
       display: flex;
       @include liReset;
+      padding: 0 4px;
       @include screen('mobile') {
         flex-flow: wrap row;
       }
@@ -105,8 +106,6 @@
             overflow: hidden;
           }
           li {
-            // flex: 0 0 100%;
-
             width: auto;
             margin-right: 0.5em;
             display: block;
@@ -121,9 +120,15 @@
             }
             @include screen('mobile') {
               display: inline-block;
+              padding-left: 1rem;
+              &::before {
+                top: 0px;
+              }
             }
+
             a {
               display: block;
+              transition: all 0.5s;
               // @include aSetting($colorWord);
               color: #fff;
               font-weight: normal;
@@ -133,12 +138,18 @@
               padding: 0.5em 0;
               background: none;
               padding-left: 0.5rem;
-              &:hover {
-                color: $colorLight;
-              }
+
               @include screen('xsMobile') {
                 font-size: 0.813rem;
                 padding: 0.25em 0;
+              }
+            }
+            &:hover {
+              a {
+                color: $colorLight;
+              }
+              &::before {
+                color: $colorLight;
               }
             }
           }

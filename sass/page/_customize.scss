@@ -17,7 +17,7 @@
   }
 }
 .breadcrumb {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   position: relative;
   font-weight: 500;
   padding-left: 3rem;
@@ -33,5 +33,31 @@
     height: 30px;
     top: 0;
     left: 0;
+  }
+}
+h2.title {
+  position: relative;
+  &::after {
+    position: absolute;
+    left: 0;
+    content: '';
+    width: 150px;
+    height: 6px;
+    bottom: -15px;
+    border-radius: 3px;
+    background: $colorSecondary;
+  }
+  margin-bottom: 3rem;
+}
+.main {
+  .container {
+    flex-wrap: wrap;
+  }
+}
+.btnSearch {
+  background: $colorSecondary;
+  color: #000;
+  &:hover {
+    background: lighten($colorSecondary, 15);
   }
 }

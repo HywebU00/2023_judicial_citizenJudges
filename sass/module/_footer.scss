@@ -3,7 +3,7 @@ footer {
   text-align: left;
   font-size: 0.813em;
   padding: 1em 0;
-
+  padding-top: 3rem;
   .container {
     justify-content: space-between;
     flex-wrap: wrap;
@@ -22,6 +22,11 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: -3rem;
+    @include screen('tablet') {
+      margin-top: 0rem;
+      display: block;
+    }
   }
   a {
     text-decoration: none;
@@ -36,10 +41,40 @@ footer {
   }
   .footerInfo {
     flex: 1 1 auto;
+    margin-left: 3.5rem;
+    span {
+      margin-bottom: 0.5rem;
+    }
+    @include screen('tablet') {
+      margin-left: 0rem;
+    }
   }
   .footerIcon {
-    flex: 0 1 200px;
-    text-align: right;
+    // flex: 0 1 200px;
+    // text-align: right;
+    // display: flex;
+    // justify-content: center;
+    > div {
+      display: flex;
+      align-items: center;
+      @include screen('tablet') {
+        justify-content: flex-end;
+      }
+    }
+    .icon {
+      background-color: $colorPrimary;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 1rem;
+      img {
+        width: 23px;
+        height: 22px;
+      }
+    }
     @include screen('tablet') {
       flex: 1 1 100%;
     }
@@ -49,16 +84,20 @@ footer {
     @include liReset();
     clear: both;
     display: flex;
-
+    @include screen('tablet') {
+      justify-content: center;
+    }
     @include screen('mobile') {
       flex-flow: row wrap;
     }
+
     li {
       flex: 0 1 auto;
       margin: 0px 5px 0px 0px;
-      @include screen('mobile') {
-        flex: 1 1 25%;
-      }
+
+      // @include screen('mobile') {
+      //   flex: 1 1 25%;
+      // }
       a {
         display: block;
         padding: 0.25em 1em;
@@ -66,6 +105,26 @@ footer {
         text-align: center;
         transition: 0.3s ease-out;
         white-space: nowrap;
+        position: relative;
+
+        &::after {
+          position: absolute;
+          content: '|';
+          right: -0.3rem;
+        }
+        &:hover {
+          color: $aHover;
+          &::after {
+            color: #222;
+          }
+        }
+      }
+      &:last-child {
+        a {
+          &::after {
+            display: none;
+          }
+        }
       }
     }
   }
@@ -86,6 +145,9 @@ footer {
   .Copyright {
     margin: 0;
     line-height: 1.65rem;
+    @include screen('tablet') {
+      text-align: center;
+    }
   }
   .footerIcon {
     a {
