@@ -117,6 +117,7 @@
     margin-top: -5em;
     a {
       max-width: 800px;
+      max-height: 220px;
       @include screen('tablet') {
         max-width: unset;
         width: 100%;
@@ -385,16 +386,25 @@ body {
       &:nth-child(1n) {
         i {
           background: $colorLink;
+          &:hover {
+            background: darken($colorLink, 10%);
+          }
         }
       }
       &:nth-child(2n) {
         i {
           background: $colorSecondary;
+          &:hover {
+            background: darken($colorSecondary, 10%);
+          }
         }
       }
       &:nth-child(3n) {
         i {
           background: $colorLight;
+          &:hover {
+            background: darken($colorLight, 10%);
+          }
         }
       }
     }

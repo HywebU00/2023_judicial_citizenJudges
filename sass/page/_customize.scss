@@ -9,6 +9,11 @@
   button.swiper-pagination-bullet.swiper-pagination-bullet-active {
     background: $colorSecondary;
   }
+  button {
+    &:focus-visible {
+      box-shadow: $colorLight 0px 1px 2px, $colorLight 0px 0px 0px 2px;
+    }
+  }
 }
 .menuOverlay {
   background: RGBA(0, 0, 0, 0);
