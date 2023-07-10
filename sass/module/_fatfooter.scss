@@ -120,6 +120,8 @@
             }
             @include screen('mobile') {
               display: inline-block;
+            }
+            @include screen('xsMobile') {
               padding-left: 1rem;
               &::before {
                 top: 0px;

@@ -25,7 +25,7 @@ $btnWordColor: #222; //按鈕字的顏色
 $colorBrown: #553929;
 // 連結顏色
 // $aColor: #00a4f9;
-$aColor: darken($colorLight, 25%); //lighten($colorSecondary, 10%);
+$aColor: $colorSecondary; // //lighten($colorSecondary, 10%);
 $aHover: mix($aColor, #000, 90%);
 $aFocus: mix($aColor, #fff, 90%);
 // 表單focus顏色

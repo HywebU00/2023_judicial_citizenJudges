@@ -206,9 +206,6 @@
       padding-left: 0;
       margin-right: 2rem;
       li {
-        // height: 30px;
-        // width: 30px;
-        // margin-bottom: 0.75rem;
         a {
           position: relative;
           display: block;
@@ -254,12 +251,16 @@
           }
         }
       }
+
       .active {
         a {
           &::before {
             background-color: $colorSecondary;
           }
         }
+      }
+      @include screen('mobile') {
+        margin-right: 0rem;
       }
     }
   }
