@@ -16,7 +16,8 @@
   }
   .accessKeyDefine {
     padding: 1em 2em;
-    background: #eee;
+    // background: #eee;
+    background: #fff;
     border-radius: 6px;
     li {
       margin-bottom: 0.2em;
@@ -49,7 +50,8 @@
       border-bottom: 2px solid $colorPrimary;
       &:hover,
       &:focus-visible {
-        color: $colorPrimary;
+        // color: $colorPrimary;
+        color: $aHover;
         text-decoration: none;
       }
     }

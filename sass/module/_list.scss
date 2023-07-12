@@ -65,7 +65,8 @@
         }
         time {
           display: block;
-          color: #aaa;
+          // color: #aaa;
+          color: $colorPrimary;
           font-size: 0.938em;
           font-weight: normal;
         }

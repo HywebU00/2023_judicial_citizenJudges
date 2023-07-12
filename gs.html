@@ -8,13 +8,24 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>2023 法務部國民法官</title>
-
-  <!-- 燈箱fancybox -->
-  <link rel="stylesheet" type="text/css" href="vendor/fancybox/jquery.fancybox.min.css" />
+  <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+  <![endif]-->
   <!-- style css -->
   <link rel="stylesheet" href="css/style.css" />
   <!-- favicon -->
   <link href="images/favicon.png" rel="icon" type="image/x-icon" />
+  <style>
+    .sp .gsc-control-cse {
+      background-color: unset;
+      border: 1px solid #f2f2e9;
+    }
+
+    .sp .gsc-webResult.gsc-result {
+      border: 1px solid #f2f2e9;
+    }
+  </style>
 </head>
 
 <body>
@@ -174,19 +185,11 @@
     </header>
     <!-- header End -->
     <!-- main Start -->
-    <main id="center" class="main innerPage sp">
+    <main id="center" class="main innerPage">
       <!-- 內頁新增一個classname-->
       <a class="accessKey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
       <div class="container">
-        <!-- top banner start -->
-        <div class="topBanner">
-          <a href="#">
-            <div class="">
-              <img src="images/customize_img/top_banner.jpg" alt="圖說1" />
-            </div>
-          </a>
-        </div>
-        <!-- top banner end -->
+
         <!-- 主要內容區 -->
         <div class="centerBlock">
           <!-- breadcrumb路徑 -->
@@ -198,277 +201,100 @@
             </ul>
           </nav>
           <!-- h2節點 -->
-          <h2 class="title">國民法官服務臺</h2>
+          <h2 class="title">節點標題</h2>
+          <!-- functionPanel -->
+          <div class="functionPanel">
+            <div class="publishTime"><span>發布日期：</span><time>2019-01-01</time></div>
+            <!-- 文字大小 -->
+            <div class="fontSize">
+              <span class="font-size-label">字型大小：</span>
+              <!-- 英文用<span>font-size：</span> -->
+              <ul aria-labelledby="font-size-label">
+                <li><button role="button" href="#" class="small">小</button></li>
+                <li><button role="button" href="#" class="medium">中</button></li>
+                <li><button role="button" href="#" class="large">大</button></li>
+              </ul>
+            </div>
+
+            <!-- function功能區塊 -->
+            <div class="function">
+              <ul>
+                <li class="back">
+                  <a href="javascript:history.back()">回上一頁</a>
+                </li>
+                <li class="print"><a href="#">友善列印</a></li>
+                <li class="forward"><a href="#">轉寄友人</a></li>
+              </ul>
+            </div>
+            <!-- 社群分享 -->
+            <div class="share">
+              <ul>
+                <li>
+                  <a href="#"><img src="images/basic/icon_facebook.svg" alt="facebook" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/basic/icon_twitter.svg" alt="twitter" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/basic/icon_line.svg" alt="line" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/basic/icon_youtube.svg" alt="youtube" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/basic/icon_googleplus.svg" alt="google plus" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/basic/icon_instagram.svg" alt="instagram" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/basic/icon_linkedin.svg" alt="LinkedIn" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/basic/icon_rss.svg" alt="RSS" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/basic/icon_plurk.svg" alt="Plurk" /></a>
+                </li>
+              </ul>
+            </div>
+          </div>
 
           <!-- SP Start -->
-          <!-- submenu -->
-          <!-- 國民法官的職權區塊 start -->
-          <section class="spCard ">
-            <div class="card info">
-              <div class="">
-                <ul>
-                  <li>
-                    <h3>國民法官的職權</h3>
-                    <span class="txt">1.依法執行審判職務。2.全程參與審判程序。3.請求訊問/詢問。4.提出/請求釋疑。5.與法官共同評議作</span>
-                  </li>
-                  <li>
-                    <h3>國民法官的義務</h3>
-                    <span class="txt">1.公平審判義務。2.保密義務。3.到場執行職務義務。4.聽從訴訟指揮及遵守法庭秩序義務。</span>
-                  </li>
-                </ul>
-              </div>
+          <section class="sp">
+            <div id="gsresult">
+              <script>
+                function gcseCallback() {
+                  //if (document.readyState != 'complete')
+                  //    return google.setOnLoadCallback(gcseCallback, true);
+                  google.search.cse.element.render({
+                    gname: 'gsearch',
+                    div: 'gsresult',
+                    tag: 'search',
+                    attributes: { as_sitesearch: '' },
+                  });
+                  var element = google.search.cse.element.getElement('gsearch');
+                  element.execute('法官');
+                }
+                window.__gcse = {
+                  parsetags: 'explicit',
+                  callback: gcseCallback,
+                };
+                (function () {
+                  var cx = 'bbfb6b718fa6fa6f6';
+                  var gcse = document.createElement('script');
+                  gcse.type = 'text/javascript';
+                  gcse.async = true;
+                  gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                  var s = document.getElementsByTagName('script')[0];
+                  s.parentNode.insertBefore(gcse, s);
+                })();
+              </script>
             </div>
           </section>
-          <!-- 國民法官的職權區塊 end -->
-          <!-- 成為備選國民法官 start -->
-          <section class="spCard quickSection  active" id="sp_judge">
-            <div class="card step1">
-              <div class="">
-                <h3>成為備選國民法官</h3>
-                <ul>
-                  <li>
-                    <a href="#">
-                      <span>於前一年造具備選國民法官名冊</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <span>誰可以成為國民法官?</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <span>誰不能成為國民法官?</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <span>誰可以拒絕成為國民法官?</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </section>
-          <!-- 成為備選國民法官 end -->
-
-          <!-- 成為候選國民法官 start -->
-          <section class="spCard quickSection" id="sp_candidate">
-            <div class="card step1 ">
-              <div class="">
-                <h3>成為候選國民法官</h3>
-                <ul>
-                  <li>
-                    <img src="images/customize_img/sp_listImg02.png" alt="">
-                    <span>
-                      <a href="#">
-                        <span>抽選候選國民法官通知於選任期日到庭</span>
-                      </a>
-                      <span class="txt">抽選候選國民法官通知於選任期日到庭 審理案件前，法院會隨機從複選名冊抽出候選國民法官，並通知參加選任程序。</span>
-                    </span>
-                  </li>
-                  <li>
-                    <img src="images/customize_img/sp_listImg01.png" alt="">
-                    <span>
-                      <a href="#">
-                        <span>回填調查表及除名通知</span>
-                      </a>
-                      <span class="txt">如確認不具資格或有正當理由拒絕，會予以除名並通知不用到庭參加選任程
-                        序。</span>
-                    </span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </section>
-          <!-- 成為候國民法官 end -->
-          <!-- 參與選任程序 start -->
-          <section class="spCard  quickSection" id="sp_program">
-            <div class="card step1">
-              <div class="">
-                <h3>參與選任程序</h3>
-                <ul>
-                  <li>
-                    <a href="#">
-                      <span>詢問候選國民法官</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <span>隨機抽選出國民法官</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <span>備位國民法官</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <span>詢選任期日當天我要做什麼?</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <span>候選國民法官有什麼義務?</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <span>候選國民法官</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </section>
-          <!--參與選任程序 end -->
-          <!-- 宣示與審前說明start -->
-          <section class="spCard  quickSection" id="sp_caption">
-            <div class="card step2">
-              <div>
-                <h3>宣示與審前說明</h3>
-                <ul>
-                  <li>
-                    <a href="#">
-                      <span>宣誓：國民法官表明會依法公正、誠實的審理案件</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <span>審前說明由審判長向國民法官說明法律原則及審判程序</span>
-                    </a>
-                  </li>
-
-                </ul>
-              </div>
-            </div>
-          </section>
-          <!--宣示與審前說明 end -->
-          <!-- 審判程序開始 start -->
-          <section class="spCard quickSection" id="sp_programStart">
-            <div class="card step2 ">
-              <div>
-                <h3>審判程序開始</h3>
-                <ul>
-                  <li>
-                    <a href="#">
-                      <span>由書記官朗讀案由、檢察官陳述起訴要旨、審判長權利告知</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </section>
-          <!--審判程序開始 end -->
-          <!-- 開審陳述與證據調查 start -->
-          <section class="spCard quickSection" id="sp_statement">
-            <div class="card step2 ">
-              <div>
-                <h3>開審陳述與證據調查</h3>
-                <ul>
-                  <li>
-                    <a href="#">
-                      <span>由檢察官及辯護人說明舉證計劃，也就是接下來會用什麼證據證明各
-                        自的主張
-                      </span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <span>調查證據由檢察官及辯護人在法庭內展現可證明自己主張的證據(證人
-                        、鑑定人、書證、物證)
-                      </span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </section>
-          <!--開審陳述與證據調查 end -->
-          <!-- 言詞辯論 start -->
-          <section class="spCard  quickSection" id="sp_debate">
-            <div class="card step3">
-              <div class=>
-                <h3>言詞辯論</h3>
-                <ul>
-                  <li>
-                    <a href="#">
-                      <span>檢察官、辯護人分別辯論被告有沒有罪、犯什麼罪、要判多重的刑。
-                      </span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <span>被害人或其家屬陳述意見，被告最後陳述後辯論終結
-                      </span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </section>
-          <!--言詞辯論 end -->
-          <!-- 評議討論 start -->
-          <section class="spCard quickSection" id="sp_discuss">
-            <div class="card  step3">
-              <div>
-                <h3>評議討論</h3>
-                <ul>
-                  <li>
-                    <a href="#">
-                      <span>國民法官與法官共同討論後作成判決</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <span>國民法官法庭如何做出判決?</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <span>審判過程中要注意什麼?</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </section>
-          <!--評議討論 end -->
-          <!-- 宣示判決 start -->
-          <section class="spCard quickSection" id="sp_judgment">
-            <div class="card step3 ">
-              <div>
-                <h3>宣示判決</h3>
-                <ul>
-                  <li>
-                    <a href="#">
-                      <span>由審判長宣示判決，國民法官與備位國民法官的任務完成</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </section>
-          <!--宣示判決 end -->
-          <!-- SP End -->
+          <!-- sP End -->
         </div>
       </div>
-      <!-- 快速按鈕列 start -->
-      <div class="quickDot">
-        <ul>
-          <li class="active"><a href="#" title="成為國民法官" data-href="sp_judge"><span>成為國民法官</span></a></li>
-          <li><a href="#" title="成為候選國民法官" data-href="sp_candidate"><span>成為候選國民法官</span></a></li>
-          <li><a href="#" title="參與選任程序" data-href="sp_program"><span>參與選任程序</span></a></li>
-          <li><a href="#" title="宣示與審前說明" data-href="sp_caption"><span>宣示與審前說明</span></a></li>
-          <li><a href="#" title="審判程序開始" data-href="sp_programStart"><span>審判程序開始</span></a></li>
-          <li><a href="#" title="開審陳述與證據調查" data-href="sp_statement"><span>開審陳述與證據調查</span></a></li>
-          <li><a href="#" title="言詞辯論" data-href="sp_debate"><span>言詞辯論</span></a></li>
-          <li><a href="#" title="評議討論" data-href="sp_discuss"><span>評議討論</span></a></li>
-          <li><a href="#" title="宣示判決" data-href="sp_judgment"><span>宣示判決</span></a></li>
-        </ul>
-      </div>
-      <!-- 快速按鈕列 end -->
     </main>
     <!-- fatFooter Start -->
     <section class="fatFooter">
@@ -594,10 +420,6 @@
   <script src="vendor/fancybox/fancybox.js"></script>
   <!-- swiper -->
   <script src="vendor/swiper/swiper-bundle.min.js"></script>
-  <!-- gsap -->
-  <script src="vendor/gsap/gsap.min.js"></script>
-  <script src="vendor/gsap/ScrollTrigger.min.js"></script>
-
   <!-- main js-->
   <script src="js/main.js"></script>
   <!-- js -->

@@ -720,8 +720,8 @@ body {
 }
 .infoSection {
   @extend .listTypeE;
-  background: url(../images/customize_img/bg_icon.png) center center no-repeat;
-  background-size: contain;
+  // background: url(../images/customize_img/bg_icon.png) center center no-repeat;
+  // background-size: contain;
   .container {
     max-width: 1360px;
   }
@@ -768,7 +768,7 @@ body {
   .infoList {
     padding: 0 15px;
     list-style: none;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 1.2rem;
     padding-left: 15px;
     line-height: 2.5rem;
@@ -842,22 +842,38 @@ body {
   }
 }
 .courtSection {
-  .container {
+  position: relative;
+  &::after {
+    content: '';
+    background: url(../images/customize_img/bg_02.jpg) no-repeat;
+    position: absolute;
+    width: 100%;
+    height: 520px;
+    top: 300px;
+    // left: -50px;
+    z-index: 0;
+  }
+  @include screen('tablet') {
     &::after {
-      content: '';
-      background: url(../images/customize_img/bg_02.jpg) no-repeat;
-      position: absolute;
-      width: 100%;
-      height: 520px;
-      top: 300px;
-      left: -50px;
-      z-index: -1;
+      opacity: 0.3;
     }
-    @include screen('tablet') {
-      &::after {
-        opacity: 0.3;
-      }
-    }
+  }
+  .container {
+    // &::after {
+    //   content: '';
+    //   background: url(../images/customize_img/bg_02.jpg) no-repeat;
+    //   position: absolute;
+    //   width: 100%;
+    //   height: 520px;
+    //   top: 300px;
+    //   left: -50px;
+    //   z-index: 0;
+    // }
+    // @include screen('tablet') {
+    //   &::after {
+    //     opacity: 0.3;
+    //   }
+    // }
   }
 
   .pic {
@@ -887,16 +903,26 @@ body {
       width: 100%;
       height: 100%;
     }
+    @include screen('tablet') {
+      margin-top: 2rem;
+    }
   }
   .txt {
     color: $colorWord;
     margin-top: 1rem;
     display: block;
   }
+  .item {
+    position: relative;
+    z-index: 1;
+  }
   .info {
     > div {
       justify-content: end;
       padding-top: 5rem;
+      @include screen('tablet') {
+        padding-top: 0rem;
+      }
       .col {
         @include screen('tablet') {
           width: 100%;
@@ -908,13 +934,37 @@ body {
     .txt {
       font-weight: 500;
       line-height: 2rem;
+      font-size: 1.2em;
       letter-spacing: 0.1rem;
-      margin-left: 4.5rem;
-      margin-right: 4.5rem;
+      @include screen('tablet') {
+        margin: 1rem;
+
+        // margin-left: 4.5rem;
+        // margin-right: 4.5rem;
+      }
     }
   }
 }
 .knowledgeSection {
+  position: relative;
+  &::after {
+    content: '';
+    background: url(../images/customize_img/bg_03.jpg) no-repeat top right;
+    background-size: cover;
+    position: absolute;
+    width: 45rem;
+    height: 32rem;
+    right: 0;
+    bottom: 8rem;
+
+    border-radius: 2rem 0 0 2rem;
+  }
+  @include screen('tablet') {
+    &::after {
+      bottom: -5rem;
+    }
+  }
+
   .container {
     .flexSet {
       .col {
@@ -923,18 +973,6 @@ body {
 
       position: relative;
 
-      &::after {
-        content: '';
-        background: url(../images/customize_img/bg_03.jpg) no-repeat top right;
-        background-size: cover;
-        position: absolute;
-        width: 45rem;
-        height: 32rem;
-        top: 0px;
-        right: -120px;
-        z-index: -1;
-        border-radius: 2rem 0 0 0;
-      }
       @include screen('notebook') {
         &::after {
           right: -30px;
@@ -953,9 +991,12 @@ body {
     border-radius: 2rem 0 2rem 2rem;
     padding: 2.5rem 2rem;
     width: 56rem;
+    position: relative;
+    z-index: 1;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
     @include screen('tablet') {
       width: 100%;
+      margin-top: 0rem;
     }
   }
   .knowledgeSlider {

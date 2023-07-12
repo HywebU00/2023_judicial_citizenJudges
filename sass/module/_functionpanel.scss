@@ -143,7 +143,9 @@ div.function {
           text-align: center;
           line-height: 32px;
           border-radius: 50%;
-          background: #f1f1f1;
+          // background: #f1f1f1;
+          background-color: #fff;
+          border: 1px solid #ccc;
           text-indent: -9999px;
           position: relative;
           &:hover,
@@ -226,7 +228,9 @@ div.function {
     position: relative;
     a.shareButton {
       display: block;
-      background: #f1f1f1;
+      // background: #f1f1f1;
+      background-color: #fff;
+      border: 1px solid #ccc;
       border-radius: 50%;
       width: 32px;
       height: 32px;

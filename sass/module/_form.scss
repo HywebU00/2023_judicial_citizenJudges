@@ -1316,6 +1316,8 @@ input[type='radio']:checked,
 input[type='radio']:focus {
   border-color: $formFocus;
   background-color: $formFocus;
+  // border-color: $formFocus;
+  // background-color: $formFocus;
   outline: none;
 }
 

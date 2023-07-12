@@ -95,7 +95,9 @@
 }
 .btnSubmit {
   // @extend %btn;
-  @include btnSetting(lighten($colorPrimary, 5), #fff);
+  // @include btnSetting(lighten($colorPrimary, 5), #fff);
+  @include btnSetting(darken($colorSecondary, 20), #fff);
+  border-radius: 0.25rem;
 }
 .btnReset {
   // @extend %btn;

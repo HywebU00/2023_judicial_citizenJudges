@@ -1796,7 +1796,11 @@ function accordionFunction(obj) {
   function a11y() {
     if (Boolean(accordionItem)) {
       accordionItem.forEach((item, index) => {
+        if (item.nextElementSibling === null) {
+          return;
+        }
         let content = item.nextElementSibling.querySelectorAll('a,input,select,textarea');
+
         let firstItem = false;
 
         if (!openFirst) {
@@ -1840,6 +1844,9 @@ function accordionFunction(obj) {
         item.innerHTML += `<span class="accordionArrow"></span>`;
         item.setAttribute('aria-expanded', 'false');
         item.setAttribute('aria-controls', random);
+        if (item.parentElement.querySelector('.accordionContent') === null) {
+          return;
+        }
         item.parentElement.querySelector('.accordionContent').setAttribute('id', random);
         if (openFirst) {
           item.nextElementSibling.style.display = `block`;
@@ -1860,6 +1867,10 @@ function accordionFunction(obj) {
 
   function openTarget(item) {
     let content = item.nextElementSibling;
+    console.log(content);
+    if (content === null) {
+      return;
+    }
     let display = window.getComputedStyle(content).display;
     content.style.display = display;
 
@@ -1904,6 +1915,9 @@ function accordionFunction(obj) {
     });
     siblings.forEach((otherItem, index) => {
       let content = otherItem.querySelector('.accordionContent');
+      if (content === null) {
+        return;
+      }
       if (content.style.Height !== 0 || content.style.Height !== null) {
         otherItem.querySelector('.accordionState').innerHTML = `${open}`;
         otherItem.classList.remove('active');
