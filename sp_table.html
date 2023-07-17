@@ -7,7 +7,7 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>2023 法務部國民法官</title>
+  <title>2023 司法院國民法官</title>
 
   <!-- 燈箱fancybox -->
   <link rel="stylesheet" type="text/css" href="vendor/fancybox/jquery.fancybox.min.css" />
@@ -202,29 +202,64 @@
 
           <!-- SP Start -->
           <section class="">
-            <div class="schedule_search_block">
-              <form method="post" id="QueryForm" class="form_inline" action="lp-1715-1.html">
-                <div class="form_grp">
-                  <label for="" class="form_title">法案名稱</label>
-                  <input type="text" id="" value="" placeholder="請輸入關鍵字">
+            <!-- search start -->
+            <div class=" searchBlock">
+              <form class="form_inline">
+
+                <div class="form_grp formGrp"><label>身分類別</label>
+                  <select>
+                    <option value="">全部</option>
+                    <option value="2">法院人員</option>
+                    <option value="1">司法院人員</option>
+                    <option value="3">檢察署人員</option>
+                    <option value="4">律師</option>
+                  </select>
                 </div>
-                <div class="form_grp">
+                <div class="form_grp formGrp"><label>可宣導區域</label><select>
+                    <option value="">不指定</option>
+                    <option value="全國各區">全國各區</option>
+                    <option value="臺北">臺北</option>
+                    <option value="新北">新北</option>
+                    <option value="桃園">桃園</option>
+                    <option value="新竹">新竹</option>
+                    <option value="宜蘭">宜蘭</option>
+                    <option value="基隆">基隆</option>
+                    <option value="花蓮">花蓮</option>
+                    <option value="臺東">臺東</option>
+                    <option value="臺中">臺中</option>
+                    <option value="苗栗">苗栗</option>
+                    <option value="南投">南投</option>
+                    <option value="彰化">彰化</option>
+                    <option value="雲林">雲林</option>
+                    <option value="嘉義">嘉義</option>
+                    <option value="臺南">臺南</option>
+                    <option value="高雄">高雄</option>
+                    <option value="屏東">屏東</option>
+                    <option value="澎湖">澎湖</option>
+                    <option value="金門">金門</option>
+                    <option value="連江">連江</option>
+                    <option value="其他">其他</option>
+                  </select></div>
+                <div class="form_grp formGrp">
                   <label for="" class="form_title">全文檢索</label>
                   <input type="text" id="" value="" placeholder="請輸入關鍵字">
                 </div>
-                <div class="btn_grp">
-                  <input name="BtnSubmit" id="BtnSubmit" type="submit" title="查詢" value="查詢">
+                <div class="btn_grp formGrp">
+                  <input name="BtnSubmit" class="btn btnSubmit" id="BtnSubmit" type="submit" title="查詢" value="查詢">
+
                 </div>
               </form>
             </div>
-            <table class="tableSprite ">
+            <!-- search end -->
+
+            <table class="tableSprite  tableList">
               <!-- 無障礙 caption 標題預設隱藏 -->
-              <caption>
+              <caption class="srTitle">
                 無障礙表格標題
                 <!-- 若表格內容複雜，可以補充摘要(summary)來加強說明表格內容，但 內容不要與標題重複 -->
                 <!-- <span class="summary">表格摘要</span> -->
               </caption>
-              <thead>
+              <!-- <thead>
                 <tr>
                   <th>項次</th>
                   <th>法案名稱</th>
@@ -236,64 +271,45 @@
                   <th>函立法院審議</th>
                   <th>公布日期及條文</th>
                 </tr>
+              </thead> -->
+              <thead>
+                <tr>
+                  <th>項次</th>
+                  <th class="nowrap">講師</th>
+                  <th>職稱</th>
+                  <th>單位名稱</th>
+                  <th>聯絡地址</th>
+                  <th>連絡電話</th>
+                  <th>可宣導地區</th>
+                </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td data-title="序號" class="num">1</td>
-                  <td data-title="法案名稱">公務員懲戒法修正案</td>
-                  <td data-title="主管廳">行政訴訟及懲戒廳</td>
-                  <td data-title="異動區分" class="center">修正</td>
-                  <td data-title="修正重點" class="center">增訂公務員懲戒法二審救濟程序</td>
-                  <td data-title="院會通過日期" class="center"></td>
-                  <td data-title="函他機關會銜" class="center"></td>
-                  <td data-title="函立法院審議"></td>
-                  <td data-title="公布日期及條文"></td>
+                  <td class="num">01</td>
+                  <td class="">毛妍懿</td>
+                  <td>法官</td>
+                  <td>臺灣高等法院高雄分院</td>
+                  <td>80402 高雄市鼓山區明誠三路586號</td>
+                  <td>07-5523621</td>
+                  <td>高雄</td>
                 </tr>
                 <tr>
-                  <td data-title="序號" class="num">2</td>
-                  <td data-title="法案名稱">公務員懲戒委員會組織法修正案</td>
-                  <td data-title="主管廳">司法行政廳</td>
-                  <td data-title="異動區分" class="center">修正</td>
-                  <td data-title="修正重點" class="center">更名為懲戒法院</td>
-                  <td data-title="院會通過日期" class="center"></td>
-                  <td data-title="函他機關會銜" class="center"></td>
-                  <td data-title="函立法院審議"></td>
-                  <td data-title="公布日期及條文"></td>
+                  <td class="num">01</td>
+                  <td class="">毛妍懿</td>
+                  <td>法官</td>
+                  <td>臺灣高等法院高雄分院</td>
+                  <td>80402 高雄市鼓山區明誠三路586號</td>
+                  <td>07-5523621</td>
+                  <td>高雄</td>
                 </tr>
                 <tr>
-                  <td data-title="序號" class="num">3</td>
-                  <td data-title="法案名稱">刑事訴訟法部分條文修正案</td>
-                  <td data-title="主管廳">刑事廳</td>
-                  <td data-title="異動區分" class="center">修正</td>
-                  <td data-title="修正重點" class="center">防範被告逃亡機制</td>
-                  <td data-title="院會通過日期" class="center"></td>
-                  <td data-title="函他機關會銜" class="center"></td>
-                  <td data-title="函立法院審議">2018-12-12<div><a href="" class="pdf">預告日期</a><a href="" class="odf">預告日期</a><a href="" class="doc">預告日期</a></div>
-                  </td>
-                  <td data-title="公布日期及條文">2019-07-03<a href="" class="article">條文內容</a></td>
-                </tr>
-                <tr>
-                  <td data-title="序號" class="num">4</td>
-                  <td data-title="法案名稱">刑事訴訟法部分條文修正案</td>
-                  <td data-title="主管廳">刑事廳</td>
-                  <td data-title="異動區分" class="center">修正</td>
-                  <td data-title="修正重點" class="center">量刑辯論</td>
-                  <td data-title="院會通過日期" class="center"></td>
-                  <td data-title="函他機關會銜" class="center"></td>
-                  <td data-title="函立法院審議"></td>
-                  <td data-title="公布日期及條文"></td>
-                </tr>
-                <tr>
-                  <td data-title="序號" class="num">5</td>
-                  <td data-title="法案名稱">刑事訴訟法施行法第7條之14修正案</td>
-                  <td data-title="主管廳">刑事廳</td>
-                  <td data-title="異動區分" class="center">修正</td>
-                  <td data-title="修正重點" class="center">因應刑事訴訟法刑事扣押修正案</td>
-                  <td data-title="院會通過日期" class="center"></td>
-                  <td data-title="函他機關會銜" class="center"></td>
-                  <td data-title="函立法院審議">2019-05-08<div><a href="" class="xls">預告日期</a><a href="" class="pdf">預告日期</a><a href="" class="pdf">預告日期</a></div>
-                  </td>
-                  <td data-title="公布日期及條文"></td>
+                  <td class="num">01</td>
+                  <td class="">毛妍懿</td>
+                  <td>法官</td>
+                  <td>臺灣高等法院高雄分院</td>
+                  <td>80402 高雄市鼓山區明誠三路586號</td>
+                  <td>07-5523621</td>
+                  <td>高雄</td>
                 </tr>
               </tbody>
             </table>

@@ -1389,15 +1389,21 @@ function templateChange(obj) {
 
 function shareBtnFunction() {
   // --- 創造一個a連結的按鈕
-  const shareUl = document.querySelector('.share');
+  const shareUl = document.querySelectorAll('.share');
+
   if (shareUl) {
-    const btn = document.createElement('a');
-    btn.setAttribute('class', 'shareButton');
-    btn.setAttribute('role', 'button');
-    btn.setAttribute('tabindex', '0');
-    btn.textContent = 'share分享按鈕';
-    shareUl.insertBefore(btn, shareUl.childNodes[0]);
+    shareUl.forEach((i) => {
+      const btn = document.createElement('a');
+      btn.setAttribute('class', 'shareButton');
+      btn.setAttribute('role', 'button');
+      btn.setAttribute('tabindex', '0');
+      btn.textContent = 'share分享按鈕';
+
+      i.insertBefore(btn, i.childNodes[0]);
+    });
+    //
   }
+
   const shareBtn = new SelectSlider({
     name: document.querySelectorAll('.share'), // --- 控制的對象
     control: document.querySelectorAll('.share a'), // --- 監聽的對象
@@ -2087,7 +2093,29 @@ langFunction({
     },
   },
 });
+// .contentShare function
 
+const contentList = document.querySelectorAll('.contentShare');
+// console.log(contentList);
+contentList.length ? openContentShare() : '';
+function openContentShare() {
+  contentList.forEach((i) => {
+    i.addEventListener('click', () => {
+      function removeClass() {
+        i.classList.remove('active');
+      }
+      function addClass() {
+        i.classList.add('active');
+      }
+      i.classList.contains('active') ? removeClass() : addClass();
+    });
+  });
+}
+// const contentShareBtn = new SelectSlider({
+//   name: document.querySelectorAll('.contentShare'), // --- 控制的對象
+//   control: document.querySelectorAll('.contentShare a'), // --- 監聽的對象
+// });
+// contentShareBtn.initial();
 // -----------------------------------------------------------------------
 // -----   a標籤無障礙判斷   -----------------------------------------------
 // -----------------------------------------------------------------------

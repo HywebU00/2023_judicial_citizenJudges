@@ -947,7 +947,8 @@ body {
 }
 .knowledgeSection {
   position: relative;
-  &::after {
+
+  &::before {
     content: '';
     background: url(../images/customize_img/bg_03.jpg) no-repeat top right;
     background-size: cover;
@@ -960,7 +961,7 @@ body {
     border-radius: 2rem 0 0 2rem;
   }
   @include screen('tablet') {
-    &::after {
+    &::before {
       bottom: -5rem;
     }
   }
@@ -992,7 +993,7 @@ body {
     padding: 2.5rem 2rem;
     width: 56rem;
     position: relative;
-    z-index: 1;
+    z-index: 2;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
     @include screen('tablet') {
       width: 100%;

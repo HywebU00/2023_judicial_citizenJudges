@@ -1,6 +1,6 @@
 // -----  基本功能開關   ---------------------------------------------------
 topNav(); // 手機版顯示nav選單
-navSticky(); // 捲動時固定主選單
+//navSticky(); // 捲動時固定主選單
 fatFooter(); // fatFooter是否要展開
 tabFunction('.tabSet'); // tab功能
 // scrollTables('table'); // table捲動功能
@@ -22,8 +22,8 @@ accordionFunction({
   autoClose: true, // 點擊時自動關閉已展開的項目，若需要此功能需要關閉openFirst
   duration: 200,
   info: {
-    open: '展開', // 收合時顯示
-    close: '收合', // 展開時顯示
+    open: '', // 收合時顯示
+    close: '', // 展開時顯示
   },
 });
 // 手風琴功能
@@ -150,6 +150,8 @@ accordionFunction({
     preloadImages: false, // 多筆設定lazy時須設定
     centeredSlides: false, // 多筆設定lazy時須設定
     slidesPerView: 4,
+    slideThumbActiveClass: 'swiper-slide-thumb-active',
+
     // watchSlidesProgress: true,
     navigation: {
       nextEl: '.navSlider .nextSlider', //下一張class，無障礙設定關係需要增加.nextSlider
@@ -174,6 +176,11 @@ accordionFunction({
     effect: 'fade', //淡入
     fadeEffect: {
       crossFade: true, //上一張淡出，false上一張不淡出，下一張疊在上方
+    },
+    navigation: {
+      nextEl: '.sliderFor .nextSlider', //下一張class，無障礙設定關係需要增加.nextSlider
+      prevEl: '.sliderFor .prevSlider', //前一張class，無障礙設定關係需要增加.prevSlider
+      disabledClass: 'swiperArrow-disabled', //不可點選樣式
     },
     pagination: {
       el: '.sliderFor .pagination',

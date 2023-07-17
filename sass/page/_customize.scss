@@ -56,7 +56,17 @@ h2.title {
   margin-bottom: 2rem;
   + .subTitle {
     font-size: 1.25rem;
+    color: $colorPrimary;
+    margin-bottom: 1rem;
+    display: block;
   }
+}
+.titleTag {
+  background: darken($colorSecondary, 20%);
+  display: inline-block;
+  border-radius: 0.3rem;
+  color: #fff;
+  padding: 0.25rem 0.75rem;
 }
 
 .main {
@@ -85,10 +95,9 @@ h2.title {
   .title {
     border-radius: 0.5rem 0.5rem 0 0;
     font-weight: 400;
-    // background: lighten($colorSecondary, 20%);
-    background: $colorSecondary;
+
+    background: $colorPrimary;
     padding: 1rem 0.5rem;
-    color: $colorWord;
   }
   .nodeMenu {
     .accordion {
@@ -181,6 +190,10 @@ h2.title {
   }
 }
 table.tableSprite {
+  margin-top: 2rem;
+  .srTitle {
+    @include srOnly;
+  }
   th {
     background: $colorPrimary;
     color: #fff;
@@ -197,6 +210,7 @@ table.tableSprite {
     }
   }
 }
+
 .cp table {
   th {
     background: $colorPrimary;
@@ -229,6 +243,7 @@ table.tableSprite {
       width: calc(100% - 1rem);
       border-radius: 0.5rem;
       margin: 0.5rem auto;
+      max-height: 14rem;
       iframe {
         width: 100%;
         aspect-ratio: 4/3;
@@ -263,5 +278,286 @@ table.tableSprite {
 .webLink {
   li {
     border-color: $colorGray;
+  }
+}
+.searchBlock {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0.5rem;
+  background: $btnBg;
+  border-radius: 0 1rem 1rem 1rem;
+  form {
+    display: flex;
+    @include screen('mobile') {
+      flex-wrap: wrap;
+    }
+    .formGrp {
+      display: flex;
+      white-space: nowrap;
+      label {
+        margin-bottom: 0;
+        line-height: 49px;
+      }
+    }
+    .btn {
+      &.btnSubmit {
+        border: 1px solid $aColor;
+      }
+      border: 1px solid $colorPrimary;
+    }
+  }
+}
+.calendar {
+  .week {
+    margin-bottom: 1rem;
+    ul {
+      padding-left: 0;
+      display: flex;
+      list-style: none;
+      justify-content: center;
+      .btn {
+        border: 1px solid $colorPrimary;
+        border-radius: 0.25rem;
+        background: unset;
+        color: $colorPrimary;
+        padding: 0.6rem 3rem;
+        &:hover {
+          background-color: $colorPrimary;
+          color: #fff;
+        }
+        &.thisweek {
+          background-color: $colorPrimary;
+          color: #fff;
+        }
+        &.lastweek {
+          position: relative;
+          &:before {
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 8px 12px 8px 0;
+            border-color: transparent $colorPrimary transparent transparent;
+            display: inline-block;
+            position: absolute;
+            left: 1.3rem;
+            top: 0.85rem;
+          }
+          &:hover {
+            &::before {
+              border-color: transparent #fff transparent transparent;
+            }
+          }
+        }
+        &.nextweek {
+          position: relative;
+          &:after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 8px 0 8px 12px;
+            border-color: transparent transparent transparent $colorPrimary;
+            display: inline-block;
+            position: absolute;
+            right: 1.3em;
+            top: 0.85em;
+          }
+          &:hover {
+            &:after {
+              border-color: transparent transparent transparent #fff;
+            }
+          }
+        }
+      }
+
+      + .number {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.questionAccordion {
+  .accordion {
+    li {
+      &.active {
+        button {
+          background: $colorSecondary;
+          color: $colorWord;
+        }
+      }
+      button {
+        font-size: 1.17rem;
+        font-weight: bold;
+        &:hover {
+          background: $colorSecondary;
+          color: $colorWord;
+        }
+      }
+      .dep {
+        text-align: end;
+        color: $colorPrimary;
+      }
+      .contentShare {
+        @extend .share;
+        position: absolute;
+        right: 2rem;
+        ul {
+          display: block;
+          height: 0;
+          overflow: hidden;
+          transition: all 0.5s;
+          position: absolute;
+          background: #fff;
+          box-shadow: 2px 2px 5px RGBA(0, 0, 0, 0.2);
+          border-radius: 0.5rem;
+          // padding: 0.25rem;
+          margin-top: 0.25rem;
+          z-index: 2;
+          li {
+            width: 2rem;
+          }
+        }
+        .shareButton {
+          display: block;
+
+          border: 1px solid #ccc;
+          border-radius: 50%;
+          width: 32px;
+          height: 32px;
+          text-indent: -9999px;
+
+          text-align: center;
+
+          background: url(../images/basic/icon_share.svg) no-repeat center;
+          background-size: 80%;
+          background-color: #fff;
+        }
+        &.active {
+          ul {
+            transition: all 0.5s;
+            height: auto;
+          }
+        }
+        &:hover,
+        &.active {
+          .shareButton {
+            background: url(../images/basic/icon_share_dark.svg) no-repeat center;
+            background-size: 80%;
+            background-color: $aHover;
+          }
+        }
+      }
+    }
+  }
+}
+table {
+  td.num {
+    text-align: center;
+  }
+}
+.sliderFor {
+  a {
+    display: block;
+  }
+  .swiperArrow {
+    padding: 10px;
+  }
+  .imgContainer {
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+}
+.navSlider {
+  width: 60%;
+  margin: 0 auto;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  .imgContainer {
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: block;
+      background: #000;
+      opacity: 0.6;
+    }
+  }
+  .swiper {
+    background: #000;
+  }
+  .swiper-wrapper {
+    align-items: center;
+  }
+
+  .swiper-slide-thumb-active {
+    &::before {
+      opacity: 0;
+    }
+  }
+}
+.calendartable {
+  overflow-x: scroll;
+  > table {
+    min-width: 600px;
+    background: #fff;
+    border: 0 0 1px 0;
+    caption {
+      background: $aColor;
+      margin-bottom: 0;
+      padding: 1rem;
+      text-align: center;
+      color: #fff;
+      border-radius: 0.5rem 0.5rem 0 0;
+    }
+    th {
+      border: 0px;
+      background: $colorPrimary;
+      color: #fff;
+    }
+    .date {
+      text-align: center;
+      font-weight: bold;
+    }
+    .center {
+      text-align: center;
+    }
+
+    tr {
+      td {
+        border: 0px solid;
+        border-bottom: 1px solid #ddd;
+      }
+      &:nth-child(odd) {
+        background: lighten($colorGray, 15%);
+      }
+      tbody {
+        tr {
+          &:nth-child(odd) {
+            background: unset;
+          }
+          td {
+            background: unset;
+            border: none;
+          }
+          th {
+            border: none;
+            background: unset;
+
+            color: $colorWord;
+          }
+        }
+      }
+    }
+  }
+}
+.header {
+  position: sticky;
+  @include screen('mobile') {
+    position: fixed;
+    width: 100%;
   }
 }
