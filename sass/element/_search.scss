@@ -13,7 +13,8 @@
   padding: 0;
   margin: 0;
   border: none;
-  background: $colorInfo;
+  // background: $colorInfo;
+  background: unset;
   &::before {
     content: '';
     width: 100%;
