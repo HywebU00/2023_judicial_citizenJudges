@@ -266,6 +266,9 @@ table.tableSprite {
     iframe {
       transition: all 0.3s;
     }
+    p {
+      @include textLine(4, 23.2px);
+    }
     &:hover {
       iframe,
       img {
