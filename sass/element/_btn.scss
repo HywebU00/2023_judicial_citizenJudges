@@ -59,7 +59,9 @@
 .btn {
   @extend %btn;
   // box-sizing: border-box;
+
   @include btnSetting;
+  background: $colorGray;
   text-shadow: none;
   &:hover,
   &:focus-visible {
