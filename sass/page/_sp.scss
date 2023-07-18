@@ -293,7 +293,11 @@
     border-radius: 1rem;
   }
   margin-bottom: 1rem;
-  @include screen('mobile') {
+  @include screen('tablet') {
     margin-bottom: 0rem;
+    padding: 0 1rem;
+  }
+  @include screen('mobile') {
+    display: none;
   }
 }
