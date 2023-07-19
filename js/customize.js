@@ -242,12 +242,12 @@ accordionFunction({
     let scrollPx;
     let top;
     let currentParent;
+    let headerHeight;
     docBtn.forEach((i) => {
       i.addEventListener('click', (e) => {
         e.preventDefault();
         clickHref = i.dataset.href;
         clickSection = document.querySelector(`#${clickHref}`);
-        // i.parentElement.classList.add('active');
         //獲取元素到網頁頂部高度
         function getTop(el) {
           top = el.offsetTop;
@@ -261,9 +261,12 @@ accordionFunction({
 
         getTop(clickSection);
         //扣除header覆蓋的高度
-        scrollPx = top - 60;
+        headerHeight = document.querySelector('.header').offsetHeight;
+        scrollPx = top - headerHeight;
+        //點擊到的對應item
+        targetHeight = document.querySelector(`#${clickHref}`).offsetHeight / 3;
         window.scrollTo({
-          top: scrollPx,
+          top: scrollPx - targetHeight,
           behavior: 'smooth',
         });
       });
@@ -282,8 +285,10 @@ accordionFunction({
       gsap.to(`#${itemId}`, {
         scrollTrigger: {
           trigger: `#${itemId}`, //觸及到的目標
-          start: 'top 20%',
-          end: 'bottom 20%',
+          start: 'top center',
+          end: 'bottom center',
+          // start: 'top 20%',
+          //end: 'bottom 20%',
           // markers: true, // 區間標註
           toggleClass: { targets: itemBtn, className: 'active' },
         },
@@ -291,8 +296,8 @@ accordionFunction({
       gsap.to(`#${itemId}`, {
         scrollTrigger: {
           trigger: `#${itemId}`, //觸及到的目標
-          start: 'top 20%',
-          end: 'bottom 20%',
+          start: 'top center',
+          end: 'bottom center',
           // markers: true, // 區間標註
           toggleClass: { targets: `#${itemId}`, className: 'active' },
         },

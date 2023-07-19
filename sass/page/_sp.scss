@@ -2,6 +2,7 @@
   .card {
     padding-bottom: 7rem;
     position: relative;
+    padding-top: 1rem;
 
     > div {
       min-height: 11.25rem;
@@ -198,8 +199,7 @@
     margin-bottom: 3rem;
   }
   background-position-y: 20vh;
-  // background-size: contain;
-  // background-attachment: fixed;
+
   .quickDot {
     position: fixed;
     right: 0;
