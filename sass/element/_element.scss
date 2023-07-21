@@ -4,7 +4,7 @@
   height: 50px;
 
   border-radius: 50%;
-  background: url(../images/customize_img/arrow_top_icon.png) no-repeat center center rgb(247, 146, 77, 0.7);
+  background: url(../images/customize_img/arrow_top_icon.svg) no-repeat center center rgb(247, 146, 77, 0.7);
 
   text-align: center;
   color: #fff;
@@ -19,7 +19,7 @@
   text-indent: -999999px;
   &:hover,
   &:focus-visible {
-    background: url(../images/customize_img/arrow_top_icon.png) no-repeat center center $colorLight;
+    background: url(../images/customize_img/arrow_top_icon.svg) no-repeat center center $colorLight;
     box-shadow: none;
   }
 }
