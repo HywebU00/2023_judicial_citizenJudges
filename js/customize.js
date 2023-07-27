@@ -17,6 +17,18 @@ fontSize();
 
 // 手風琴功能
 accordionFunction({
+  accordion: '.searchAccordion .accordion',
+  openFirst: false, // 預設先展開所有內容，使用無障礙遊走不再有手風琴效果，永遠展開內容(滑鼠點擊正常開合)
+  autoClose: true, // 點擊時自動關閉已展開的項目，若需要此功能需要關閉openFirst
+  duration: 200,
+  info: {
+    open: '', // 收合時顯示
+    close: '', // 展開時顯示
+  },
+});
+
+// 手風琴功能
+accordionFunction({
   accordion: '.questionAccordion .accordion',
   openFirst: false, // 預設先展開所有內容，使用無障礙遊走不再有手風琴效果，永遠展開內容(滑鼠點擊正常開合)
   autoClose: true, // 點擊時自動關閉已展開的項目，若需要此功能需要關閉openFirst
@@ -29,6 +41,18 @@ accordionFunction({
 // 手風琴功能
 accordionFunction({
   accordion: '.nodeMenu .accordion',
+  openFirst: false, // 預設先展開所有內容，使用無障礙遊走不再有手風琴效果，永遠展開內容(滑鼠點擊正常開合)
+  autoClose: true, // 點擊時自動關閉已展開的項目，若需要此功能需要關閉openFirst
+  duration: 200,
+  info: {
+    open: '', // 收合時顯示
+    close: '', // 展開時顯示
+  },
+});
+
+// 手風琴功能
+accordionFunction({
+  accordion: '.dateAccordion .accordion',
   openFirst: false, // 預設先展開所有內容，使用無障礙遊走不再有手風琴效果，永遠展開內容(滑鼠點擊正常開合)
   autoClose: true, // 點擊時自動關閉已展開的項目，若需要此功能需要關閉openFirst
   duration: 200,

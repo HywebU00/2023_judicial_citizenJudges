@@ -424,14 +424,13 @@ table.tableSprite {
         }
       }
       button {
-        font-size: 1.17rem;
+        font-size: 1.125rem;
         font-weight: bold;
         margin-left: 0;
-        border: 1px solid $colorSecondary;
+        border: 1.5px solid $colorSecondary;
         border-left: 10px solid $colorSecondary;
         background: #fff;
         color: $colorWord;
-
         &:hover {
           background: $colorSecondary;
           color: $colorWord;
@@ -500,7 +499,7 @@ table.tableSprite {
         border-radius: 1rem;
         padding: 0rem 1rem;
         background: #fff;
-        border: 2px solid $colorSecondary;
+        border: 1.5px solid $colorSecondary;
       }
       .accordionArrow {
         &::after {
@@ -597,6 +596,156 @@ table.tableSprite {
     }
   }
 }
+.dateAccordion {
+  @extend .questionAccordion;
+  .accordion {
+    li {
+      button.accordionList {
+        padding-right: 0;
+        border: 1px solid $colorSecondary;
+        display: block;
+        border-left: 1px;
+        padding: 0;
+        span {
+          display: table-cell;
+        }
+        // &:hover {
+        //   .accordionArrow {
+        //     &::after {
+        //       border-color: $aColor;
+        //     }
+        //   }
+        // }
+      }
+
+      &:hover,
+      &.active {
+        .date {
+          background-color: $aColor;
+          color: #fff;
+        }
+        // button {
+        //   .accordionArrow {
+        //     &::after {
+        //       border-color: $aColor;
+        //     }
+        //   }
+        // }
+      }
+      .title {
+        padding: 0.5rem 3rem 0.5rem 1rem;
+        vertical-align: middle;
+      }
+      .accordionContent {
+        border: 1.5px solid $aColor;
+      }
+    }
+  }
+
+  .date {
+    background: $colorSecondary;
+    padding: 1rem;
+    border-radius: 0 0 0 1rem;
+    min-width: 130px;
+
+    vertical-align: middle;
+    height: 100%;
+    @include screen('mobile') {
+      padding: 2rem 1rem;
+    }
+  }
+}
+.searchAccordion {
+  button {
+    border-radius: 0.5rem;
+    margin-left: 0;
+    padding: 0.75rem 50px 0.75rem 20px;
+    overflow: hidden;
+    position: relative;
+
+    &:hover {
+      background: $aColor;
+    }
+  }
+  .active {
+    button {
+      background: $aColor;
+    }
+  }
+  .accordionArrow {
+    transform: rotate(0deg);
+    background: $colorSecondary;
+    position: absolute;
+    right: 0;
+    padding: 0.9rem 1.5rem;
+    top: 0;
+
+    &::after {
+      border: 0;
+      background: url('../../images/icon/icon_search.svg') no-repeat;
+      width: 20px;
+      height: 20px;
+    }
+  }
+  .accordionContent {
+    .content {
+      padding: 0;
+      .searchBlock {
+        border-radius: 0;
+      }
+      .formGrp {
+        input[type='date'] {
+          + span {
+            margin-top: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+.courtCategory {
+  margin: 0.6rem 0;
+  li {
+    width: calc(16.66% - 3px);
+    a {
+      border: 0;
+      color: $aColor;
+      background: unset;
+      padding: 0.5rem;
+      font-size: 1rem;
+      &::before {
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 5px 0 5px 6px;
+        border-color: transparent transparent transparent $colorSecondary;
+        display: inline-block;
+        margin-right: 8px;
+      }
+      &.active {
+        background: $aColor;
+        color: #fff;
+        &::before {
+          border-color: transparent transparent transparent #fff;
+        }
+      }
+    }
+    &:hover,
+    &:focus {
+      a {
+        background: $aColor;
+        color: #fff;
+      }
+    }
+  }
+  @include screen('mobile') {
+    li {
+      width: calc(50% - 3px);
+    }
+  }
+}
+
 table {
   td.num {
     text-align: center;

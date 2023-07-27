@@ -176,102 +176,9 @@
       <a class="accessKey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
       <div class="container">
         <!-- 如果不要sticky效果，就移除stickySidebar classname -->
-        <aside class="leftBlock stickySidebar">
-          <div class="sidebar__inner">
-            <div class="nodeMenu">
-              <div class="title">國民法官</div>
-              <div class="accordion">
-                <ul>
-                  <li>
-                    <a href="#" class="accordionList" role="button" title="">
-                      第二項說明
-                    </a>
-                  </li>
-                  <li>
-                    <button class="accordionList" role="button" title="">第一項說明</button>
-                    <div class="accordionContent">
-                      <div class="content">
-                        <div class="accordion">
-                          <ul>
 
-                            <li>
-                              <button class="accordionList" role="button" title="">第一項說明</button>
-                              <div class="accordionContent">
-                                <div class="content">
-                                  <a href="#">連結連結連結</a>
-                                  <a href="#">連結連結連結連結</a>
-                                  <a href="#">連結連結連</a>
-                                </div>
-                              </div>
-                            </li>
-                            <li>
-                              <button class="accordionList" role="button" title="">第二項說明</button>
-                              <div class="accordionContent">
-                                <div class="content">
-
-                                  <a href="#">連結</a>
-                                  <a href="#">連結</a>
-                                </div>
-                              </div>
-                            </li>
-
-                            <li>
-                              <button class="accordionList" role="button" title="">第三項說明</button>
-                              <div class="accordionContent">
-                                <div class="content">
-                                  <a href="#">連結</a>
-                                </div>
-                              </div>
-                            </li>
-                            <li>
-                              <button class="accordionList" role="button" title="">第四項說明</button>
-                              <div class="accordionContent">
-                                <div class="content">
-                                  <a href="#">連結連結連結連結</a>
-                                  <a href="#">連結</a>
-                                </div>
-                              </div>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                  </li>
-                  <li>
-                    <button class="accordionList" role="button" title="">第二項說明</button>
-                    <div class="accordionContent">
-                      <div class="content">
-
-                        <a href="#">連結</a>
-                        <a href="#">連結</a>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <button class="accordionList" role="button" title="">第三項說明</button>
-                    <div class="accordionContent">
-                      <div class="content">
-
-                        <a href="#">連結</a>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <button class="accordionList" role="button" title="">第四項說明</button>
-                    <div class="accordionContent">
-                      <div class="content">
-                        <a href="#">連結</a>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-
-            </div>
-          </div>
-        </aside>
         <!-- 主要內容區 -->
         <div class="centerBlock">
-          <!-- breadcrumb路徑 -->
           <nav aria-label="Breadcrumb" class="breadcrumb">
             <ul>
               <li><a href="#">首頁</a></li>
@@ -294,13 +201,10 @@
                 <li><button role="button" href="#" class="large">大</button></li>
               </ul>
             </div>
-
             <!-- function功能區塊 -->
             <div class="function">
               <ul>
-                <li class="back">
-                  <a href="javascript:history.back()">回上一頁</a>
-                </li>
+                <li class="back"><a href="javascript:history.back()">回上一頁</a></li>
                 <li class="print"><a href="#">友善列印</a></li>
                 <li class="forward"><a href="#">轉寄友人</a></li>
               </ul>
@@ -338,10 +242,49 @@
               </ul>
             </div>
           </div>
-          <!-- LP Start -->
-          <section class="">
+          <section class="lp">
+            <!-- search start -->
+            <div class="searchAccordion">
+              <div class="accordion">
+                <ul>
+                  <li>
+                    <button class="accordionList" role="button" title="">資料查詢</button>
+                    <div class="accordionContent">
+                      <div class="content">
+                        <div class=" searchBlock">
+                          <form class="form_inline">
+                            <div class="form_grp formGrp"><label>法院</label>
+                              <select>
+                                <option value="">請選擇法院</option>
+                                <option value="2">法院</option>
+                                <option value="1">法院</option>
+                                <option value="3">法院</option>
+                                <option value="4">法院</option>
+                              </select>
+                            </div>
+                            <div class="form_grp formGrp"><label>日期</label>
+                              <input type="date">
+                              <span> ~ </span>
+                              <input type="date">
+                            </div>
+                            <div class="form_grp formGrp">
+                              <label for="" class="form_title">全文檢索</label>
+                              <input type="text" id="" value="" placeholder="請輸入關鍵字">
+                            </div>
+                            <div class="btn_grp formGrp">
+                              <input name="BtnSubmit" class="btn btnSubmit" id="BtnSubmit" type="submit" title="查詢" value="查詢">
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- search end -->
             <!-- category -->
-            <div class="category">
+            <div class="category courtCategory">
               <ul>
                 <li><a href="#">標籤1</a></li>
                 <li><a href="#">標籤2</a></li>
@@ -355,171 +298,168 @@
                 <li><a href="#">標籤10</a></li>
               </ul>
             </div>
-            <!-- grid:flex -->
-            <section class="flexEqual_2 albumCardList">
-              <div class="container">
-                <div class="flexSet">
-                  <div class="thumbnail">
-                    <a href="#" data-caption="第1張圖說" data-alt="第1張圖說">
-                      <div class="imgContainer">
-                        <picture>
-                          <source media="(min-width: 1200px)" data-srcset="https://source.unsplash.com/random/1" />
-                          <source media="(min-width: 992px)" data-srcset="https://source.unsplash.com/random/1" />
-                          <source media="(min-width: 576px)" data-srcset="https://source.unsplash.com/random/1" />
-                          <source media="(max-width: 575px)" data-srcset="https://source.unsplash.com/random/1" />
-                          <img data-src="https://source.unsplash.com/random/1" class="lazy" alt="圖說1" />
-                          <noscript><img src="https://source.unsplash.com/random/1" alt="圖說1" /></noscript>
-                        </picture>
+            <div class="dateAccordion">
+              <div class="accordion">
+                <ul>
+                  <li>
+                    <button class="accordionList " role="button" title="">
+                      <span class="date">
+                        111-12-13
+                      </span>
+                      <span class="title">臺灣士林地方法院第2輪次第3場辦理國民法官模擬法庭</span>
+                    </button>
+                    <div class="accordionContent ">
+                      <div class="content ">
+                        <!-- 社群分享 -->
+                        <div class="contentShare">
+                          <a class="shareButton" role="button" tabindex="0">share分享按鈕</a>
+                          <ul>
+                            <li>
+                              <a href="#"><img src="images/basic/icon_facebook.svg" alt="facebook" /></a>
+                            </li>
+                            <li>
+                              <a href="#"><img src="images/basic/icon_twitter.svg" alt="twitter" /></a>
+                            </li>
+                            <li>
+                              <a href="#"><img src="images/basic/icon_line.svg" alt="line" /></a>
+                            </li>
+                            <li>
+                              <a href="#"><img src="images/basic/icon_youtube.svg" alt="youtube" /></a>
+                            </li>
+                            <li>
+                              <a href="#"><img src="images/basic/icon_googleplus.svg" alt="google plus" /></a>
+                            </li>
+                            <li>
+                              <a href="#"><img src="images/basic/icon_instagram.svg" alt="instagram" /></a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="text">
+                          <h3>國影自談王不美一文實別合屋？</h3>
+                          <p>國影自談王不美一文實別合屋？府性元這子一知於料的親到。一用技年不得就資公，也星樣團怎英班水灣個種決以因世書發定很功行何，下飯通反代命假到一不離護麼錯絕懷旅元人。<a href="#">世書發定很功行何連結</a>
+                            弟新過，道給仍覺裡水國、醫灣了可實界一上德字什心成但創大品隨品。難但所雜笑事禮年專阿戲經愛眾背起，間自個；獎小業美有義交安辦一則龍足，年開多！景唱而賽用出說建樣以經</p>
+                          <ul>
+                            <li>年開多！景唱而賽用出說建樣以經</li>
+                            <li>假到一不離護麼錯絕懷旅元人。</li>
+                            <li>也星樣團怎英班水灣個種決以因世書發定很功行何</li>
+                          </ul>
+                          <figure class="pic">
+                            <!-- 此範例為4:3比例 -->
+                            <picture>
+                              <source media="(min-width: 768px)" srcset="images/demo/01.jpg" />
+                              <source media="(max-width: 767px)" srcset="images/demo/01.jpg" />
+                              <img data-src="images/demo/01.jpg" class="lazy" alt="圖說" />
+                              <noscript><img src="images/demo/01.jpg" alt="圖說" /></noscript>
+                            </picture>
+                            <figcaption>圖說</figcaption>
+                          </figure>
+                          <p>
+                            <a href="#">連結文字樣式
+                            </a>大更沒於正時節直只們來壓算有先，求化化看雨的了元得前意要，性說用。以是一分，首字地旅紀親朋經有，在沒許、兒讓靈身不；候案司通資鄉下一支情西也哥際發你也是濟言通海後的健童頭各便。大更沒於正時節直只們來壓算有先，求化化看雨的了元得前意要，性說用。以是一分，首字地旅紀親朋經有，在沒許、兒讓靈身不；候案司通資鄉下一支情西也哥際發你也是濟言通海後的健童頭各便。
+                          </p>
+                        </div>
+                        <div class="dep">[ 資訊處108-10-28更新 ]</div>
                       </div>
-                      <span class="type">類別一</span>
-                      <div class="caption">
+                    </div>
+                  </li>
+                  <li>
+                    <button class="accordionList" role="button" title="">
+                      <span class="date">
+                        111-10-04
+                      </span>
+                      <span class="title">最高法院國民法官上訴審實務模擬法庭第4場次</span>
+                    </button>
+                    <div class="accordionContent">
+                      <div class="content ">
+                        <!-- 社群分享 -->
+                        <div class="contentShare">
+                          <a class="shareButton" role="button" tabindex="0">share分享按鈕</a>
+                          <ul>
+                            <li>
+                              <a href="#"><img src="images/basic/icon_facebook.svg" alt="facebook" /></a>
+                            </li>
+                            <li>
+                              <a href="#"><img src="images/basic/icon_twitter.svg" alt="twitter" /></a>
+                            </li>
+                            <li>
+                              <a href="#"><img src="images/basic/icon_line.svg" alt="line" /></a>
+                            </li>
+                            <li>
+                              <a href="#"><img src="images/basic/icon_youtube.svg" alt="youtube" /></a>
+                            </li>
+                            <li>
+                              <a href="#"><img src="images/basic/icon_googleplus.svg" alt="google plus" /></a>
+                            </li>
+                            <li>
+                              <a href="#"><img src="images/basic/icon_instagram.svg" alt="instagram" /></a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="text">
+                          <h3>國影自談王不美一文實別合屋？</h3>
+                          <p>國影自談王不美一文實別合屋？府性元這子一知於料的親到。一用技年不得就資公，也星樣團怎英班水灣個種決以因世書發定很功行何，下飯通反代命假到一不離護麼錯絕懷旅元人。<a href="#">世書發定很功行何連結</a>
+                            弟新過，道給仍覺裡水國、醫灣了可實界一上德字什心成但創大品隨品。難但所雜笑事禮年專阿戲經愛眾背起，間自個；獎小業美有義交安辦一則龍足，年開多！景唱而賽用出說建樣以經</p>
+                          <ul>
+                            <li>年開多！景唱而賽用出說建樣以經</li>
+                            <li>假到一不離護麼錯絕懷旅元人。</li>
+                            <li>也星樣團怎英班水灣個種決以因世書發定很功行何</li>
+                          </ul>
+                        </div>
+                        <div class="dep">[ 資訊處108-10-28更新 ]</div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <button class="accordionList" role="button" title="">
+                      <span class="date">
+                        111-09-12
+                      </span>
+                      <span class="title">臺灣臺北地方法院第2輪次第3場次實務模擬法庭</span>
+                    </button>
+                    <div class="accordionContent ">
+                      <div class="content ">
+                        <!-- 社群分享 -->
+                        <div class="contentShare">
+                          <a class="shareButton" role="button" tabindex="0">share分享按鈕</a>
+                          <ul>
+                            <li>
+                              <a href="#"><img src="images/basic/icon_facebook.svg" alt="facebook" /></a>
+                            </li>
+                            <li>
+                              <a href="#"><img src="images/basic/icon_twitter.svg" alt="twitter" /></a>
+                            </li>
+                            <li>
+                              <a href="#"><img src="images/basic/icon_line.svg" alt="line" /></a>
+                            </li>
+                            <li>
+                              <a href="#"><img src="images/basic/icon_youtube.svg" alt="youtube" /></a>
+                            </li>
+                            <li>
+                              <a href="#"><img src="images/basic/icon_googleplus.svg" alt="google plus" /></a>
+                            </li>
+                            <li>
+                              <a href="#"><img src="images/basic/icon_instagram.svg" alt="instagram" /></a>
+                            </li>
 
-                        <time>2018-01-01</time>
-                        <div class="albumTitle">相簿標題</div>
-                        <p>內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文</p>
+                          </ul>
+                        </div>
+                        <div class="text">
+                          <h3>國影自談王不美一文實別合屋？</h3>
+                          <p>國影自談王不美一文實別合屋？府性元這子一知於料的親到。一用技年不得就資公，也星樣團怎英班水灣個種決以因世書發定很功行何，下飯通反代命假到一不離護麼錯絕懷旅元人。<a href="#">世書發定很功行何連結</a>
+                            弟新過，道給仍覺裡水國、醫灣了可實界一上德字什心成但創大品隨品。難但所雜笑事禮年專阿戲經愛眾背起，間自個；獎小業美有義交安辦一則龍足，年開多！景唱而賽用出說建樣以經</p>
+                          <ul>
+                            <li>年開多！景唱而賽用出說建樣以經</li>
+                            <li>假到一不離護麼錯絕懷旅元人。</li>
+                            <li>也星樣團怎英班水灣個種決以因世書發定很功行何</li>
+                          </ul>
+                        </div>
+                        <div class="dep">[ 資訊處108-10-28更新 ]</div>
                       </div>
-                    </a>
-                  </div>
-                  <div class="thumbnail">
-                    <a href="#" data-caption="第2張圖說" data-alt="第2張圖說">
-                      <div class="imgContainer">
-                        <picture>
-                          <source media="(min-width: 1200px)" data-srcset="https://source.unsplash.com/random/2" />
-                          <source media="(min-width: 992px)" data-srcset="https://source.unsplash.com/random/2" />
-                          <source media="(min-width: 576px)" data-srcset="https://source.unsplash.com/random/2" />
-                          <source media="(max-width: 575px)" data-srcset="https://source.unsplash.com/random/2" />
-                          <img data-src="https://source.unsplash.com/random/2" class="lazy" alt="圖說2" />
-                          <noscript><img src="https://source.unsplash.com/random/2" alt="圖說2" /></noscript>
-                        </picture>
-                      </div>
-                      <span class="type">類別一</span>
-                      <div class="caption">
-
-                        <time>2018-01-01</time>
-                        <div class="albumTitle">相簿標題</div>
-                        <p>內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文</p>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="thumbnail">
-                    <a href="#" data-caption="第3張圖說" data-alt="第3張圖說">
-                      <div class="imgContainer">
-                        <picture>
-                          <source media="(min-width: 1200px)" data-srcset="https://source.unsplash.com/random/3" />
-                          <source media="(min-width: 992px)" data-srcset="https://source.unsplash.com/random/3" />
-                          <source media="(min-width: 576px)" data-srcset="https://source.unsplash.com/random/3" />
-                          <source media="(max-width: 575px)" data-srcset="https://source.unsplash.com/random/3" />
-                          <img data-src="https://source.unsplash.com/random/3" class="lazy" alt="圖說3" />
-                          <noscript><img src="https://source.unsplash.com/random/3" alt="圖說3" /></noscript>
-                        </picture>
-                      </div>
-                      <span class="type">類別一</span>
-                      <div class="caption">
-
-                        <time>2018-01-01</time>
-                        <div class="albumTitle">相簿標題</div>
-                        <p>內文</p>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="thumbnail">
-                    <a href="#" data-caption="第4張圖說" data-alt="第4張圖說">
-                      <div class="imgContainer">
-                        <picture>
-                          <source media="(min-width: 1200px)" data-srcset="https://source.unsplash.com/random/4" />
-                          <source media="(min-width: 992px)" data-srcset="https://source.unsplash.com/random/4" />
-                          <source media="(min-width: 576px)" data-srcset="https://source.unsplash.com/random/4" />
-                          <source media="(max-width: 575px)" data-srcset="https://source.unsplash.com/random/4" />
-                          <img data-src="https://source.unsplash.com/random/4" class="lazy" alt="圖說4" />
-                          <noscript><img src="https://source.unsplash.com/random/4" alt="圖說4" /></noscript>
-                        </picture>
-                      </div>
-                      <div class="caption">
-                        <time>2018-01-01</time>
-                        <div class="albumTitle">相簿標題</div>
-                        <p>內文</p>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="thumbnail">
-                    <a href="#" data-caption="第5張圖說" data-alt="第5張圖說">
-                      <div class="imgContainer">
-                        <picture>
-                          <source media="(min-width: 1200px)" data-srcset="https://source.unsplash.com/random/5" />
-                          <source media="(min-width: 992px)" data-srcset="https://source.unsplash.com/random/5" />
-                          <source media="(min-width: 576px)" data-srcset="https://source.unsplash.com/random/5" />
-                          <source media="(max-width: 575px)" data-srcset="https://source.unsplash.com/random/5" />
-                          <img data-src="https://source.unsplash.com/random/5" class="lazy" alt="圖說5" />
-                          <noscript><img src="https://source.unsplash.com/random/5" alt="圖說5" /></noscript>
-                        </picture>
-                      </div>
-                      <div class="caption">
-                        <time>2018-01-01</time>
-                        <div class="albumTitle">相簿標題</div>
-                        <p>內文</p>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="thumbnail">
-                    <a href="#" data-caption="第6張圖說" data-alt="第6張圖說">
-                      <div class="imgContainer">
-                        <picture>
-                          <source media="(min-width: 1200px)" data-srcset="https://source.unsplash.com/random/6" />
-                          <source media="(min-width: 992px)" data-srcset="https://source.unsplash.com/random/6" />
-                          <source media="(min-width: 576px)" data-srcset="https://source.unsplash.com/random/6" />
-                          <source media="(max-width: 575px)" data-srcset="https://source.unsplash.com/random/6" />
-                          <img data-src="https://source.unsplash.com/random/6" class="lazy" alt="圖說6" />
-                          <noscript><img src="https://source.unsplash.com/random/6" alt="圖說6" /></noscript>
-                        </picture>
-                      </div>
-                      <div class="caption">
-                        <time>2018-01-01</time>
-                        <div class="albumTitle">相簿標題</div>
-                        <p>內文</p>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="thumbnail">
-                    <a href="#" data-caption="第7張圖說" data-alt="第7張圖說">
-                      <div class="imgContainer">
-                        <picture>
-                          <source media="(min-width: 1200px)" data-srcset="https://source.unsplash.com/random/7" />
-                          <source media="(min-width: 992px)" data-srcset="https://source.unsplash.com/random/7" />
-                          <source media="(min-width: 576px)" data-srcset="https://source.unsplash.com/random/7" />
-                          <source media="(max-width: 575px)" data-srcset="https://source.unsplash.com/random/7" />
-                          <img data-src="https://source.unsplash.com/random/7" class="lazy" alt="圖說7" />
-                          <noscript><img src="https://source.unsplash.com/random/7" alt="圖說7" /></noscript>
-                        </picture>
-                      </div>
-                      <div class="caption">
-                        <time>2018-01-01</time>
-                        <div class="albumTitle">相簿標題</div>
-                        <p>內文</p>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="thumbnail">
-                    <a href="#" data-caption="第8張圖說" data-alt="第8張圖說">
-                      <div class="imgContainer">
-                        <picture>
-                          <source media="(min-width: 1200px)" data-srcset="https://source.unsplash.com/random/8" />
-                          <source media="(min-width: 992px)" data-srcset="https://source.unsplash.com/random/8" />
-                          <source media="(min-width: 576px)" data-srcset="https://source.unsplash.com/random/8" />
-                          <source media="(max-width: 575px)" data-srcset="https://source.unsplash.com/random/8" />
-                          <img data-src="https://source.unsplash.com/random/8" class="lazy" alt="圖說8" />
-                          <noscript><img src="https://source.unsplash.com/random/8" alt="圖說8" /></noscript>
-                        </picture>
-                      </div>
-                      <div class="caption">
-                        <time>2018-01-01</time>
-                        <div class="albumTitle">相簿標題</div>
-                        <p>內文</p>
-                      </div>
-                    </a>
-                  </div>
-                </div>
+                    </div>
+                  </li>
+                </ul>
               </div>
-            </section>
+            </div>
           </section>
           <!-- LP End -->
           <!-- Pagination -->
@@ -534,16 +474,16 @@
                     <option value="">30</option>
                     <option value="">40</option>
                   </select>
-                  筆 <input type="button" class="btn btnSubmit" value="確定" title="確定" />
+                  筆 <input type="button" value="確定" class="btn btnSubmit" title="確定" />
                 </div>
               </div>
             </form>
             <ul class="page">
               <li class="first">
-                <a href="#" title="第一頁">第一頁</a>
+                <a href="#" title="第一頁">第一頁 </a>
               </li>
               <li class="prev">
-                <a href="#" title="回上一頁">回上一頁</a>
+                <a href="#" title="回上一頁">回上一頁 </a>
               </li>
               <li class="active"><a href="#">1</a></li>
               <li><a href="#">2</a></li>
@@ -555,9 +495,11 @@
               <li><a href="#">8</a></li>
               <li><a href="#">9</a></li>
               <li><a href="#">10</a></li>
-              <li class="next"><a href="#" title="下一頁">下一頁</a></li>
+              <li class="next">
+                <a href="#" title="下一頁">下一頁 </a>
+              </li>
               <li class="last">
-                <a href="#" title="最後一頁">最後一頁</a>
+                <a href="#" title="最後一頁">最後一頁 </a>
               </li>
             </ul>
           </div>
@@ -690,7 +632,7 @@
   <script src="vendor/swiper/swiper-bundle.min.js"></script>
   <!-- main js-->
   <script src="js/main.js"></script>
-  <!-- js -->
+  <!-- 客製js -->
   <script src="js/customize.js"></script>
 </body>
 
