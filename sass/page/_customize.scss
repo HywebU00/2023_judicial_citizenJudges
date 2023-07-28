@@ -850,6 +850,7 @@ table {
 }
 .header {
   position: sticky;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
   &::before {
     background-color: rgba(242, 242, 233, 0.9);
     backdrop-filter: blur(10px);
