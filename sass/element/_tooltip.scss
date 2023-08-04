@@ -27,11 +27,13 @@ em {
 [tooltip]:after {
   content: attr(tooltip);
   text-align: left;
-  min-width: 150px;
+  // min-width: 150px;
+  min-width: 200px;
   line-height: 1.5em;
   max-width: 300px;
+
   font-size: 0.813em;
-  max-height: (($toolTopFontSize * 0.813) * 1.5) * 4.25;
+  // max-height: (($toolTopFontSize * 0.813) * 1.5) * 4.25;
   overflow: hidden;
   padding: 0.5em;
   border-radius: 4px;
@@ -147,7 +149,7 @@ em {
     background: #dedede;
     text-align: center;
     padding: 10px;
-    width: 100px;
+    width: 300px;
     // height: 20px;
     line-height: 20px;
     vertical-align: baseline;

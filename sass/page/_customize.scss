@@ -55,7 +55,7 @@ h2.title {
   }
   margin-bottom: 2rem;
   + .subTitle {
-    font-size: 1.25rem;
+    font-size: 1.25em;
     color: $colorPrimary;
     margin-bottom: 1rem;
     display: block;
@@ -424,7 +424,7 @@ table.tableSprite {
         }
       }
       button {
-        font-size: 1.125rem;
+        font-size: 1.125em;
         font-weight: bold;
         margin-left: 0;
         border: 1.5px solid $colorSecondary;
@@ -712,7 +712,7 @@ table.tableSprite {
       color: $aColor;
       background: unset;
       padding: 0.5rem;
-      font-size: 1rem;
+      font-size: 1em;
       &::before {
         content: '';
         width: 0;
