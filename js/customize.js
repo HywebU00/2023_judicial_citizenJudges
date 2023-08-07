@@ -62,6 +62,88 @@ accordionFunction({
   },
 });
 
+// 頁籤中的手風琴功能
+accordionFunction({
+  accordion: '#accordion1 .accordion',
+  openFirst: false, // 預設先展開所有內容，使用無障礙遊走不再有手風琴效果，永遠展開內容(滑鼠點擊正常開合)
+  autoClose: true, // 點擊時自動關閉已展開的項目，若需要此功能需要關閉openFirst
+  duration: 200,
+  info: {
+    open: '', // 收合時顯示
+    close: '', // 展開時顯示
+  },
+});
+accordionFunction({
+  accordion: '#accordion2 .accordion',
+  openFirst: false, // 預設先展開所有內容，使用無障礙遊走不再有手風琴效果，永遠展開內容(滑鼠點擊正常開合)
+  autoClose: true, // 點擊時自動關閉已展開的項目，若需要此功能需要關閉openFirst
+  duration: 200,
+  info: {
+    open: '', // 收合時顯示
+    close: '', // 展開時顯示
+  },
+});
+accordionFunction({
+  accordion: '#accordion3 .accordion',
+  openFirst: false, // 預設先展開所有內容，使用無障礙遊走不再有手風琴效果，永遠展開內容(滑鼠點擊正常開合)
+  autoClose: true, // 點擊時自動關閉已展開的項目，若需要此功能需要關閉openFirst
+  duration: 200,
+  info: {
+    open: '', // 收合時顯示
+    close: '', // 展開時顯示
+  },
+});
+accordionFunction({
+  accordion: '#accordion4 .accordion',
+  openFirst: false, // 預設先展開所有內容，使用無障礙遊走不再有手風琴效果，永遠展開內容(滑鼠點擊正常開合)
+  autoClose: true, // 點擊時自動關閉已展開的項目，若需要此功能需要關閉openFirst
+  duration: 200,
+  info: {
+    open: '', // 收合時顯示
+    close: '', // 展開時顯示
+  },
+});
+accordionFunction({
+  accordion: '#accordion5 .accordion',
+  openFirst: false, // 預設先展開所有內容，使用無障礙遊走不再有手風琴效果，永遠展開內容(滑鼠點擊正常開合)
+  autoClose: true, // 點擊時自動關閉已展開的項目，若需要此功能需要關閉openFirst
+  duration: 200,
+  info: {
+    open: '', // 收合時顯示
+    close: '', // 展開時顯示
+  },
+});
+accordionFunction({
+  accordion: '#accordion6 .accordion',
+  openFirst: false, // 預設先展開所有內容，使用無障礙遊走不再有手風琴效果，永遠展開內容(滑鼠點擊正常開合)
+  autoClose: true, // 點擊時自動關閉已展開的項目，若需要此功能需要關閉openFirst
+  duration: 200,
+  info: {
+    open: '', // 收合時顯示
+    close: '', // 展開時顯示
+  },
+});
+accordionFunction({
+  accordion: '#accordion7 .accordion',
+  openFirst: false, // 預設先展開所有內容，使用無障礙遊走不再有手風琴效果，永遠展開內容(滑鼠點擊正常開合)
+  autoClose: true, // 點擊時自動關閉已展開的項目，若需要此功能需要關閉openFirst
+  duration: 200,
+  info: {
+    open: '', // 收合時顯示
+    close: '', // 展開時顯示
+  },
+});
+accordionFunction({
+  accordion: '#accordion8 .accordion',
+  openFirst: false, // 預設先展開所有內容，使用無障礙遊走不再有手風琴效果，永遠展開內容(滑鼠點擊正常開合)
+  autoClose: true, // 點擊時自動關閉已展開的項目，若需要此功能需要關閉openFirst
+  duration: 200,
+  info: {
+    open: '', // 收合時顯示
+    close: '', // 展開時顯示
+  },
+});
+
 // -----  基本功能開關   ---------------------------------------------------
 
 // 自行加入的JS請寫在這裡

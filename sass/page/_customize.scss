@@ -293,6 +293,9 @@ table.tableSprite {
     iframe {
       transition: all 0.3s;
     }
+    img {
+      object-fit: contain;
+    }
     p {
       margin-top: 0.5em;
       @include textLine(4, 23.2px);
@@ -653,6 +656,50 @@ table.tableSprite {
     @include screen('mobile') {
       padding: 2rem 1rem;
     }
+  }
+}
+.dateTab {
+  .tabSet {
+    .tabItems {
+      flex-wrap: wrap;
+      margin: 0.6rem 0;
+      button {
+        margin: 0px 3px 3px 0px;
+        background: unset;
+        color: $aColor;
+        text-align: start;
+        width: calc(16.66% - 3px);
+        border-radius: 0.25rem;
+        height: unset;
+        flex: none;
+        &::before {
+          content: '';
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 5px 0 5px 6px;
+          border-color: transparent transparent transparent $colorSecondary;
+          display: inline-block;
+          margin-right: 8px;
+        }
+        &.active {
+          background: $aColor;
+          color: #fff;
+          &::before {
+            border-color: transparent transparent transparent #fff;
+          }
+        }
+        &:hover,
+        &:focus {
+          background: $aColor;
+          color: #fff;
+        }
+      }
+    }
+  }
+  .tabContent {
+    padding: 0;
+    box-shadow: none;
   }
 }
 .searchAccordion {

@@ -983,8 +983,8 @@ function tabFunction(elem) {
     const firstFocus = [...tab.querySelectorAll('a,input,select,textarea')].shift();
     const firstItem = [...tab.querySelectorAll('.tabBtn')].shift();
     tabItem.forEach((item, index) => {
-      let content = contentItem[index].querySelectorAll('a,input,select,textarea');
-      let prevItem = contentItem[index - 1] !== undefined ? contentItem[index - 1].querySelectorAll('a,input,select,textarea') : '';
+      let content = contentItem[index].querySelectorAll('a,input,select,textarea,button');
+      let prevItem = contentItem[index - 1] !== undefined ? contentItem[index - 1].querySelectorAll('a,input,select,textarea,button') : '';
       let prevItemLastA;
       prevItem !== undefined ? (prevItemLastA = prevItem[prevItem.length - 1]) : '';
 
@@ -1873,7 +1873,6 @@ function accordionFunction(obj) {
 
   function openTarget(item) {
     let content = item.nextElementSibling;
-    console.log(content);
     if (content === null) {
       return;
     }
@@ -2100,7 +2099,7 @@ const contentList = document.querySelectorAll('.contentShare');
 contentList.length ? openContentShare() : '';
 function openContentShare() {
   contentList.forEach((i) => {
-    i.addEventListener('click', () => {
+    function toggleClass() {
       function removeClass() {
         i.classList.remove('active');
       }
@@ -2108,6 +2107,22 @@ function openContentShare() {
         i.classList.add('active');
       }
       i.classList.contains('active') ? removeClass() : addClass();
+    }
+    function keyCodeRemoveClass() {
+      i.classList.add('active');
+      let list = [...i.querySelectorAll('ul>li>a')];
+      let len = list.length;
+      list.forEach((item, idx) => {
+        item.addEventListener('focusout', () => {
+          if (idx === len - 1) {
+            toggleClass();
+          }
+        });
+      });
+    }
+    i.addEventListener('click', toggleClass);
+    i.addEventListener('keydown', (e) => {
+      e.keyCode === 13 || e.keyCode === 9 ? keyCodeRemoveClass() : '';
     });
   });
 }
