@@ -672,6 +672,9 @@ table.tableSprite {
         border-radius: 0.25rem;
         height: unset;
         flex: none;
+        @include screen('mobile') {
+          width: calc(50% - 3px);
+        }
         &::before {
           content: '';
           width: 0;

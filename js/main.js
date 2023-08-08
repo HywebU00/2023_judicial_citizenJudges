@@ -1097,22 +1097,29 @@ function tabFunction(elem) {
     tabItem[openIndex] ? tabItem[openIndex].classList.add('active') : '';
 
     let tabWidth = tab.offsetWidth;
-    window.setTimeout(function () {
-      if (tabWidth > 700) {
-        contentItem[openIndex].classList.add('active');
-        tabItem.forEach((item, index) => {
-          contentItem[index].querySelector('.content').removeAttribute('style');
-        });
-        desktopType();
-        a11yControl();
-        clickFunction();
-      } else {
-        contentItem[openIndex].querySelector('.content').style.display = 'block';
-        mobileType();
-        clickFunctionMobile();
-        a11yControlMobile();
-      }
-    }, 100);
+    contentItem[openIndex].classList.add('active');
+    tabItem.forEach((item, index) => {
+      contentItem[index].querySelector('.content').removeAttribute('style');
+    });
+    desktopType();
+    a11yControl();
+    clickFunction();
+    // window.setTimeout(function () {
+    //   if (tabWidth > 700) {
+    //     contentItem[openIndex].classList.add('active');
+    //     tabItem.forEach((item, index) => {
+    //       contentItem[index].querySelector('.content').removeAttribute('style');
+    //     });
+    //     desktopType();
+    //     a11yControl();
+    //     clickFunction();
+    //   } else {
+    //     contentItem[openIndex].querySelector('.content').style.display = 'block';
+    //     mobileType();
+    //     clickFunctionMobile();
+    //     a11yControlMobile();
+    //   }
+    // }, 100);
   }
 
   if (tab !== null) {
