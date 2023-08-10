@@ -21,6 +21,12 @@
     background: RGBA(0, 0, 0, 0.5);
   }
 }
+.mainMenu > ul > li {
+  flex: 0 1 12.5%;
+  ul {
+    width: 110%;
+  }
+}
 .breadcrumb {
   margin-bottom: 2rem;
   position: relative;
@@ -112,6 +118,14 @@ h2.title {
           padding: 0;
           .accordionList {
             padding: 15px 30px 15px 20px;
+
+            .accordionArrow {
+              &.noItem {
+                &:after {
+                  display: none;
+                }
+              }
+            }
           }
           > a,
           button {

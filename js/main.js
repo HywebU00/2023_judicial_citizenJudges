@@ -1858,6 +1858,7 @@ function accordionFunction(obj) {
         item.setAttribute('aria-expanded', 'false');
         item.setAttribute('aria-controls', random);
         if (item.parentElement.querySelector('.accordionContent') === null) {
+          hideArrow(item);
           return;
         }
         item.parentElement.querySelector('.accordionContent').setAttribute('id', random);
@@ -1877,7 +1878,10 @@ function accordionFunction(obj) {
       });
     }
   }
-
+  function hideArrow(item) {
+    let arrow = item.querySelector('.accordionArrow');
+    arrow.classList.add('noItem');
+  }
   function openTarget(item) {
     let content = item.nextElementSibling;
     if (content === null) {
