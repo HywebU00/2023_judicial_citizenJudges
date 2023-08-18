@@ -52,7 +52,7 @@
     }
     .titleBox {
       position: absolute;
-      max-width: rem(1200);
+      max-width: remSize(1200);
       padding: 20px;
       width: 100%;
       margin: auto;
@@ -69,23 +69,25 @@
       h2 {
         padding: 0;
         margin: 0 0 10px;
-        font-size: rem(24);
+        font-size: remSize(24);
+
         @include screen('mobile') {
-          font-size: rem(18);
+          font-size: remSize(18);
         }
       }
       h1 {
-        font-size: rem(40);
+        font-size: remSize(40);
+
         @include screen('tablet') {
-          font-size: rem(30);
+          font-size: remSize(30);
         }
         @include screen('mobile') {
-          font-size: rem(22);
+          font-size: remSize(22);
         }
       }
       p {
         margin: 0;
-        font-size: rem(16);
+        font-size: remSize(16);
       }
     }
     .txtBox {
@@ -95,14 +97,15 @@
       left: 0;
       width: 100%;
       .txt {
-        font-size: rem(18);
+        font-size: remSize(18);
+
         padding: 20px;
         width: 100%;
         margin: 0 auto;
         color: #fff;
         max-width: 75rem;
         @include screen('tablet') {
-          font-size: rem(16);
+          font-size: remSize(16);
         }
       }
     }
@@ -186,7 +189,28 @@
     }
   }
 }
+.videoSlider {
+  .pic {
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      display: block;
+      background: rgb(0 0 0/30%) url('../images/demo/icon_play.png') center no-repeat;
+      transition: 0.3s ease-out;
+      border-radius: 1em;
+    }
 
+    &:hover {
+      &::before {
+        background-color: rgb(0 0 0/0%);
+        transition: 0.3s ease-out;
+      }
+    }
+  }
+}
 .courtSlider {
   .swiperBox {
     img,
@@ -219,12 +243,12 @@
 }
 section {
   .titleBox {
-    font-size: rem(28);
+    font-size: remSize(28);
     text-align: center;
     font-weight: 400;
     padding: 8% 0 2%;
     @include screen('tablet') {
-      font-size: rem(22);
+      font-size: remSize(22);
     }
   }
   .listBox {
@@ -253,7 +277,7 @@ section {
     position: relative;
     margin: 0 0 0 auto;
     color: #333333;
-    font-size: rem(15);
+    font-size: remSize(15);
     text-align: center;
     padding: 10px;
   }
@@ -371,7 +395,7 @@ body {
     color: #1a1a1a;
     margin: 0;
     font-weight: normal;
-    font-size: rem(16);
+    font-size: remSize(16);
   }
 }
 .linkSection {
@@ -446,13 +470,13 @@ body {
       background: #000;
       padding: 5px 10px;
       color: #fff;
-      font-size: rem(18);
+      font-size: remSize(18);
       display: block;
       margin-bottom: 5px;
     }
   }
   .date {
-    font-size: rem(18);
+    font-size: remSize(18);
     color: #030303;
     display: block;
     font-family: 'Verdana';
@@ -460,7 +484,7 @@ body {
     position: relative;
     letter-spacing: 2px;
     @include screen('tablet') {
-      font-size: rem(16);
+      font-size: remSize(16);
     }
     &::before {
       content: '';
@@ -474,7 +498,7 @@ body {
     }
   }
   .txt {
-    font-size: rem(16);
+    font-size: remSize(16);
     line-height: 1.6;
     letter-spacing: 1px;
     color: #545454;
@@ -501,13 +525,13 @@ body {
   .title {
     margin-bottom: 20px;
     letter-spacing: 2px;
-    font-size: rem(20);
+    font-size: remSize(20);
     color: #000;
     font-weight: 500;
     line-height: 1.6;
   }
   .date {
-    font-size: rem(14);
+    font-size: remSize(14);
     color: #666666;
     display: block;
     font-family: 'Verdana';
@@ -516,7 +540,7 @@ body {
     letter-spacing: 2px;
   }
   .txt {
-    font-size: rem(16);
+    font-size: remSize(16);
     line-height: 1.6;
     letter-spacing: 1px;
     color: #545454;
@@ -576,13 +600,13 @@ body {
       background: #000;
       padding: 5px 10px;
       color: #fff;
-      font-size: rem(18);
+      font-size: remSize(18);
       display: block;
       margin-bottom: 5px;
     }
   }
   .date {
-    font-size: rem(18);
+    font-size: remSize(18);
     color: #030303;
     display: block;
     font-family: 'Verdana';
@@ -601,7 +625,7 @@ body {
     }
   }
   .txt {
-    font-size: rem(16);
+    font-size: remSize(16);
     line-height: 1.6;
     letter-spacing: 1px;
     color: #545454;
@@ -651,7 +675,7 @@ body {
     text-align: center;
     color: #000;
     font-weight: 400;
-    font-size: rem(16);
+    font-size: remSize(16);
   }
 }
 
@@ -689,13 +713,13 @@ body {
       background: #000;
       padding: 5px 10px;
       color: #fff;
-      font-size: rem(18);
+      font-size: remSize(18);
       display: block;
       margin-bottom: 5px;
     }
   }
   .date {
-    font-size: rem(18);
+    font-size: remSize(18);
     color: #030303;
     display: block;
     font-family: 'Verdana';
@@ -896,8 +920,7 @@ body {
     }
     &:hover {
       &::before {
-        background: rgb(0 0 0/0%) center no-repeat;
-        background-image: none;
+        background-color: rgb(0 0 0/0%);
         transition: 0.3s ease-out;
       }
     }

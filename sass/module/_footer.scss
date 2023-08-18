@@ -188,7 +188,8 @@ footer.typeB {
       padding: 0 0 0 20px;
       text-align: right;
       background: none;
-      font-size: rem(14);
+      // font-size: rem(14);
+      font-size: rem(14, $remFontSize);
     }
   }
   .footerIcon {

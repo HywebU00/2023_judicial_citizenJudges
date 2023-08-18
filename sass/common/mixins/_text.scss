@@ -51,6 +51,6 @@
 }
 
 //px轉rem 使用方式 rem(px) px直接輸入數字即可
-@function rem($n: $remFontSize) {
-  @return calc($n / $remFontSize * 1rem);
+@function remSize($n: $remFontSize) {
+  @return calc(($n / $remFontSize) * 1rem);
 }

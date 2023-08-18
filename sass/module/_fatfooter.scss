@@ -137,7 +137,7 @@
               color: #fff;
               font-weight: normal;
               text-align: left;
-              font-size: 0.938em;
+              font-size: remSize(14);
               line-height: 1.5em;
               padding: 0.5em 0;
               background: none;
@@ -217,7 +217,8 @@
         color: #dddddd;
         padding: 5px 0 5px 15px;
         position: relative;
-        font-size: rem(14);
+        // font-size: rem(14);
+        font-size: rem(14, $remFontSize);
         &::before {
           content: '-';
           position: absolute;

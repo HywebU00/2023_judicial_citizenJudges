@@ -23,8 +23,11 @@
 }
 .mainMenu > ul > li {
   flex: 0 1 12.5%;
-  ul {
-    width: 110%;
+  @media only screen and (max-width: 1060px) {
+    // flex: 0 1 14.2%;
+    > a {
+      padding: 0 1em;
+    }
   }
 }
 .breadcrumb {
@@ -274,7 +277,6 @@ table.tableSprite {
     .imgContainer {
       background: #fff;
       width: calc(100% - 1rem);
-
       margin: 0.5rem auto;
       max-height: 14rem;
       iframe {
@@ -283,6 +285,28 @@ table.tableSprite {
         display: block;
         object-fit: cover;
         object-position: 50% 50%;
+      }
+    }
+    .videoContainer {
+      position: relative;
+
+      img {
+        object-fit: cover;
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        display: block;
+        background: rgb(0 0 0/30%) url('../images/demo/icon_play.png') center no-repeat;
+        transition: 0.3s ease-out;
+      }
+      &:hover {
+        &::before {
+          background-color: rgb(0 0 0/0%);
+          transition: 0.3s ease-out;
+        }
       }
     }
     .caption {
@@ -300,7 +324,7 @@ table.tableSprite {
       background: $aColor;
       color: #fff;
       padding: 0.5rem 1rem;
-
+      z-index: 2;
       right: 0.5rem;
     }
     img,
@@ -517,6 +541,15 @@ table.tableSprite {
         padding: 0rem 1rem;
         background: #fff;
         border: 1.5px solid $colorSecondary;
+        .text {
+          > h3,
+          > p,
+          > ul {
+            &:first-child {
+              padding-right: 1.5em;
+            }
+          }
+        }
       }
       .accordionArrow {
         &::after {
