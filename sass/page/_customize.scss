@@ -867,6 +867,12 @@ table {
   overflow: hidden;
   .imgContainer {
     position: relative;
+    height: remSize(86);
+    img {
+      height: inherit;
+      width: inherit;
+      object-fit: cover;
+    }
     &::before {
       content: '';
       position: absolute;
@@ -877,9 +883,7 @@ table {
       opacity: 0.6;
     }
   }
-  .swiper {
-    background: #000;
-  }
+
   .swiper-wrapper {
     align-items: center;
   }
