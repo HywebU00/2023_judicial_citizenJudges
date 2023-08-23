@@ -174,7 +174,6 @@
           padding: 0.5em;
           text-decoration: none;
           color: $colorWord;
-          font-weight: bold;
           @include aSetting($colorWord);
         }
       }
@@ -209,6 +208,7 @@
     position: absolute;
     top: 20px;
     z-index: 50;
+    margin-left: 0.5rem;
     @include screen('mobile') {
       position: relative;
       top: auto;

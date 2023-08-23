@@ -851,6 +851,7 @@ table {
 .sliderFor {
   a {
     display: block;
+    width: inherit;
   }
   .swiperArrow {
     padding: 10px;
@@ -858,6 +859,13 @@ table {
   .imgContainer {
     border-radius: 1rem;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: remSize(500);
+    img {
+      width: 100%;
+    }
   }
 }
 .navSlider {
@@ -868,6 +876,7 @@ table {
   .imgContainer {
     position: relative;
     height: remSize(86);
+
     img {
       height: inherit;
       width: inherit;
