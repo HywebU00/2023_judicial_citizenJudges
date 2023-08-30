@@ -851,7 +851,8 @@ table {
 .sliderFor {
   a {
     display: block;
-    width: inherit;
+    height: 100%;
+    // width: inherit;
   }
   .swiperArrow {
     padding: 10px;
@@ -862,9 +863,16 @@ table {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-height: remSize(500);
+    height: remSize(580);
     img {
-      width: 100%;
+      min-height: 100%;
+      max-height: 100%;
+    }
+    @include screen('tablet') {
+      height: remSize(400);
+    }
+    @include screen('mobile') {
+      height: remSize(360);
     }
   }
 }
@@ -968,5 +976,12 @@ table {
   @include screen('mobile') {
     position: fixed;
     width: 100%;
+  }
+}
+.Syncing_slider {
+  .navSlider {
+    &.hide {
+      display: none;
+    }
   }
 }

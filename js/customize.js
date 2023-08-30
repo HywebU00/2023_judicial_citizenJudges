@@ -414,4 +414,30 @@ accordionFunction({
     gotoSection();
     btnListActive();
   }
+
+  //slider樣式判斷
+
+  function syncingSliderStyle() {
+    const slider = [...syncingSlider];
+    console.log(slider);
+    slider.forEach((i) => {
+      let listLen;
+      let item;
+      let list;
+      item = i.querySelectorAll('.navSlider .swiper-slide');
+      listLen = item.length;
+      list = i.querySelectorAll('.navSlider');
+      if (listLen <= 1) {
+        list.forEach((item) => {
+          console.log(item.classList);
+          item.classList.add('hide');
+        });
+      }
+    });
+  }
+
+  const syncingSlider = document.querySelectorAll('.Syncing_slider');
+  if (!!syncingSlider) {
+    syncingSliderStyle();
+  }
 })();
