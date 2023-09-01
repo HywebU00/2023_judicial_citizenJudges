@@ -365,6 +365,7 @@ body {
       padding: 20px 0;
       .title {
         @include textLine(2, 1.5em);
+        height: auto;
       }
       @include screen('xsMobile') {
         align-items: flex-start;
