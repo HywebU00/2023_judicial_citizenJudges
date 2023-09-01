@@ -257,8 +257,7 @@ accordionFunction({
     centeredSlides: false, // 多筆設定lazy時須設定
     slidesPerView: 4,
     slideThumbActiveClass: 'swiper-slide-thumb-active',
-
-    // watchSlidesProgress: true,
+    watchSlidesProgress: true,
     navigation: {
       nextEl: '.navSlider .nextSlider', //下一張class，無障礙設定關係需要增加.nextSlider
       prevEl: '.navSlider .prevSlider', //前一張class，無障礙設定關係需要增加.prevSlider
@@ -419,7 +418,6 @@ accordionFunction({
 
   function syncingSliderStyle() {
     const slider = [...syncingSlider];
-    console.log(slider);
     slider.forEach((i) => {
       let listLen;
       let item;
@@ -429,7 +427,6 @@ accordionFunction({
       list = i.querySelectorAll('.navSlider');
       if (listLen <= 1) {
         list.forEach((item) => {
-          console.log(item.classList);
           item.classList.add('hide');
         });
       }
