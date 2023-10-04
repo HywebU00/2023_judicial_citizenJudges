@@ -11,7 +11,7 @@
   }
   .bannerSlider {
     max-width: calc(1200px - 2em);
-    padding: 0 1em;
+    // padding: 0 1em;
     margin-top: 0.5em;
     border-radius: 3em;
     + .swiperDots {
@@ -39,6 +39,7 @@
         @include screen('tablet') {
           min-height: max-content;
           aspect-ratio: 2/1;
+          min-height: 200px;
         }
       }
     }
@@ -170,6 +171,7 @@
       width: 100%;
       object-fit: cover;
     }
+
     iframe {
       display: block;
       width: 100%;
@@ -184,8 +186,26 @@
       }
     }
     .caption {
-      // padding-top: 1em;
       color: $colorDark;
+    }
+    @include screen('mobile') {
+      margin: 0;
+      .swiperArrow {
+        background: rgba(242, 242, 233, 0.8);
+        padding: 0.25em;
+        &::before {
+          width: 25px;
+          height: 40px;
+        }
+        &.prevSlider {
+          margin-left: 0em;
+          border-radius: 0 0.5em 0.5em 0;
+        }
+        &.nextSlider {
+          margin-right: 0em;
+          border-radius: 0.5em 0 0 0.5em;
+        }
+      }
     }
   }
 }
@@ -219,6 +239,9 @@
     }
     .swiperArrow {
       top: 38%;
+      @include screen('mobile') {
+        top: 150px;
+      }
     }
   }
   .caption {
@@ -374,7 +397,6 @@ body {
       &:hover,
       &:focus-visible {
         .title {
-          // color: #0094e0;
           color: darken($colorSecondary, 20%);
           cursor: pointer;
         }
@@ -402,6 +424,13 @@ body {
     margin: 0;
     font-weight: normal;
     font-size: remSize(16);
+  }
+  @include screen('mobile') {
+    .videoSlider {
+      .swiperArrow {
+        top: 150px;
+      }
+    }
   }
 }
 .linkSection {
@@ -444,6 +473,12 @@ body {
   }
   .swiperArrow {
     background-color: unset;
+    @include screen('mobile') {
+      &::before {
+        width: 25px;
+        height: 40px;
+      }
+    }
   }
 }
 
@@ -671,6 +706,7 @@ body {
     border-radius: 100%;
     aspect-ratio: 1/1;
     overflow: hidden;
+    padding: 1rem;
     margin: 0 auto 10px;
     background: linear-gradient(135deg, rgba(0, 93, 157, 1) 20%, rgba(152, 209, 167, 1) 100%);
     img {
@@ -827,6 +863,9 @@ body {
   }
 }
 .qandaSection {
+  @include screen('mobile') {
+    margin-top: 5rem;
+  }
   .qandaCard {
     padding: 4rem 2rem;
     border-radius: 1rem;
@@ -873,6 +912,13 @@ body {
     .arrowBtn {
       width: 6rem;
       height: 6rem;
+    }
+    @include screen('mobile') {
+      width: 150px;
+      .arrowBtn {
+        width: 3.8em;
+        height: 3.8em;
+      }
     }
   }
 }
@@ -1043,6 +1089,13 @@ body {
           }
         }
       }
+      @include screen('xsMobile') {
+        a {
+          img {
+            height: 10rem;
+          }
+        }
+      }
     }
     .swiperBox {
       .swiper-wrapper {
@@ -1088,10 +1141,24 @@ body {
       justify-content: center;
       align-items: center;
       color: #fff;
+      @include screen('xsMobile') {
+        height: 10rem;
+      }
     }
 
     @include screen('tablet') {
       width: 100%;
+      .swiperBox {
+        .swiperArrow {
+          background: unset;
+          &.prevSlider {
+            margin-left: -3.5em;
+          }
+          &.nextSlider {
+            margin-right: -3.5em;
+          }
+        }
+      }
     }
   }
 }
