@@ -700,6 +700,7 @@ body {
 .listTypeF {
   i {
     max-width: 100px;
+    height: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -711,6 +712,15 @@ body {
     background: linear-gradient(135deg, rgba(0, 93, 157, 1) 20%, rgba(152, 209, 167, 1) 100%);
     img {
       width: 60%;
+    }
+    @include screen('xsMobile') {
+      padding: 0.75rem;
+      height: 70px;
+      width: 70px;
+    }
+    @media screen and (max-width: 374px) {
+      height: unset;
+      width: unset;
     }
   }
   .txt {
