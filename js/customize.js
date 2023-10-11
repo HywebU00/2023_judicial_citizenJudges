@@ -152,7 +152,7 @@ accordionFunction({
   const cpSwiper = new Swiper('.cpSlider .swiper', {
     slidesPerView: 4,
     spaceBetween: 20,
-    loop: false,
+    loop: true,
     // 切換點
     pagination: {
       el: '.cpSlider .swiperDots',
@@ -183,7 +183,7 @@ accordionFunction({
   });
   const mpSlider = new Swiper('.mpSlider .swiper', {
     slidesPerView: 1,
-    loop: false,
+    loop: true,
     autoplay: true,
     effect: 'fade',
     speed: 1500,
@@ -212,7 +212,7 @@ accordionFunction({
   const linkSwiper = new Swiper('.linkSlider .swiper', {
     slidesPerView: 5,
     spaceBetween: 30,
-    loop: false,
+    loop: true,
     // 切換點
     pagination: {
       el: '.linkSlider .swiperDots',
@@ -256,6 +256,7 @@ accordionFunction({
     preloadImages: false, // 多筆設定lazy時須設定
     centeredSlides: false, // 多筆設定lazy時須設定
     slidesPerView: 4,
+    loop: true,
     slideThumbActiveClass: 'swiper-slide-thumb-active',
     watchSlidesProgress: true,
     navigation: {
@@ -279,6 +280,7 @@ accordionFunction({
   const sliderFor = new Swiper('.sliderFor .swiper', {
     slidesPerView: 1, //顯示張數
     effect: 'fade', //淡入
+    loop: true,
     fadeEffect: {
       crossFade: true, //上一張淡出，false上一張不淡出，下一張疊在上方
     },
@@ -314,7 +316,7 @@ accordionFunction({
   // courtSlider 國民法官地院圖片
   const courtSlider = new Swiper('.courtSlider .swiper', {
     slidesPerView: 1,
-    loop: false,
+    loop: true,
     spaceBetween: 20,
     height: 300,
     // 切換箭頭
@@ -328,7 +330,7 @@ accordionFunction({
   // courtSlider 國民法官知識＋
   const knowledgeSlider = new Swiper('.knowledgeSlider .swiper', {
     slidesPerView: 1,
-    loop: false,
+    loop: true,
     spaceBetween: 20,
     height: 300,
     // 切換箭頭
