@@ -300,7 +300,7 @@ accordionFunction({
   // videoSlider 推薦影音
   const videoSlider = new Swiper('.videoSlider .swiper', {
     slidesPerView: 1,
-    loop: false,
+    loop: true,
     spaceBetween: 20,
     height: 300,
     // 切換箭頭
