@@ -339,6 +339,19 @@ accordionFunction({
       prevEl: '.knowledgeSlider .prevSlider', //自行設定樣式
       disabledClass: 'swiperArrow-disabled', //不可點選樣式
     },
+    on: {
+      init: function (swiper) {
+        let nexEl = document.querySelector('.knowledgeSlider .nextSlider');
+        let prevEl = document.querySelector('.knowledgeSlider .prevSlider');
+        if (swiper.slides.length < 4) {
+          nexEl.style.display = 'none';
+          prevEl.style.display = 'none';
+          swiper.params.loop = false;
+          swiper.removeSlide([0, 1]);
+          swiper.update();
+        }
+      },
+    },
   });
 
   //快速按鈕 功能列ＪＳ
