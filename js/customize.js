@@ -256,7 +256,7 @@ accordionFunction({
     preloadImages: false, // 多筆設定lazy時須設定
     centeredSlides: false, // 多筆設定lazy時須設定
     slidesPerView: 4,
-    loop: true,
+    loop: false,
     slideThumbActiveClass: 'swiper-slide-thumb-active',
     watchSlidesProgress: true,
     navigation: {
