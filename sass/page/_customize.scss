@@ -281,6 +281,9 @@ table.tableSprite {
     }
     .swiper-pagination-bullet-active {
       background: $colorSecondary;
+      &:hover {
+        background: $colorSecondary;
+      }
     }
   }
 }

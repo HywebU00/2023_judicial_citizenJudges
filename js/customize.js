@@ -149,10 +149,11 @@ accordionFunction({
 // 自行加入的JS請寫在這裡
 (function () {
   //cp輪播
+  let cpSwiperItems = document.querySelectorAll('.cpSlider .swiper-slide').length;
   const cpSwiper = new Swiper('.cpSlider .swiper', {
     slidesPerView: 4,
     spaceBetween: 20,
-    loop: true,
+    loop: cpSwiperItems >= 4,
     // 切換點
     pagination: {
       el: '.cpSlider .swiperDots',
@@ -209,10 +210,11 @@ accordionFunction({
   });
 
   //廣告輪播
+  let linkSwiperItems = document.querySelectorAll('.linkSlider .swiper-slide').length;
   const linkSwiper = new Swiper('.linkSlider .swiper', {
     slidesPerView: 5,
     spaceBetween: 30,
-    loop: true,
+    loop: linkSwiperItems > 5,
     // 切換點
     pagination: {
       el: '.linkSlider .swiperDots',
@@ -328,9 +330,10 @@ accordionFunction({
   });
 
   // courtSlider 國民法官知識＋
+  let knowledgeSliderItems = document.querySelectorAll('.knowledgeSlider .swiper-slide').length;
   const knowledgeSlider = new Swiper('.knowledgeSlider .swiper', {
     slidesPerView: 1,
-    loop: true,
+    loop: knowledgeSliderItems > 1,
     spaceBetween: 20,
     height: 300,
     // 切換箭頭
@@ -338,19 +341,6 @@ accordionFunction({
       nextEl: '.knowledgeSlider .nextSlider', //自行設定樣式
       prevEl: '.knowledgeSlider .prevSlider', //自行設定樣式
       disabledClass: 'swiperArrow-disabled', //不可點選樣式
-    },
-    on: {
-      init: function (swiper) {
-        let nexEl = document.querySelector('.knowledgeSlider .nextSlider');
-        let prevEl = document.querySelector('.knowledgeSlider .prevSlider');
-        if (swiper.slides.length < 4) {
-          nexEl.style.display = 'none';
-          prevEl.style.display = 'none';
-          swiper.params.loop = false;
-          swiper.removeSlide([0, 1]);
-          swiper.update();
-        }
-      },
     },
   });
 
