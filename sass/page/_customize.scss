@@ -208,6 +208,7 @@ h2.title {
           }
           a {
             margin-left: 1.25rem;
+            background: lighten($colorGray, 15%);
           }
           .active {
             button {
