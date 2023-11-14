@@ -130,6 +130,7 @@ h2.title {
           // border-color: $colorGray;
           font-weight: bold;
           color: $colorWord;
+
           margin: 0;
           padding: 0;
           .accordionList {
@@ -143,6 +144,7 @@ h2.title {
               }
             }
           }
+
           > a,
           button {
             margin: 0rem 0.5rem;
@@ -193,7 +195,7 @@ h2.title {
       }
       .content {
         a {
-          margin-left: 1.25rem;
+          padding-left: 1.25rem;
         }
       }
       .accordionContent {
@@ -207,8 +209,9 @@ h2.title {
             }
           }
           a {
-            margin-left: 1.25rem;
-            background: lighten($colorGray, 15%);
+            // padding-left: 1.75rem;
+            padding-left: 2rem;
+            background: mix(#fff, $colorInfo, 0.25);
           }
           .active {
             button {
