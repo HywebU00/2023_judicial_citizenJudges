@@ -275,6 +275,7 @@ table.tableSprite {
     }
     td.date {
       word-break: keep-all;
+      text-wrap: nowrap;
     }
   }
 }
