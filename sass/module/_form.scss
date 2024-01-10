@@ -1250,6 +1250,7 @@ input[type='file']:focus-visible,
 input[type='tel']:focus-visible,
 input[type='email']:focus-visible,
 input[type='password']:focus-visible,
+input[type='date']:focus-visible,
 textarea:focus-visible,
 select:focus-visible {
   // border: 1px solid lighten($formFocus, 20);

@@ -811,7 +811,7 @@ table.tableSprite {
     background: $colorSecondary;
     position: absolute;
     right: 0;
-    padding: 0.9rem 1.5rem;
+    padding: 1.2rem 1.5rem;
     top: 0;
 
     &::after {
@@ -820,6 +820,10 @@ table.tableSprite {
       width: 20px;
       height: 20px;
     }
+  }
+  .active .accordionArrow {
+    top: 0 !important;
+    transform: none !important;
   }
   .accordionContent {
     .content {

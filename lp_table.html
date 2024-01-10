@@ -372,6 +372,53 @@
                 <li><a href="#">標籤10</a></li>
               </ul>
             </div>
+            <!-- 條件查詢 start -->
+            <button type="button" class="btn conditional_searchbtn">條件查詢</button>
+            <div class="conditional_searchblock">
+              <form action="">
+                <div class="flexForm formGrid">
+                  <div class="formGrp">
+                    <label for="title" class="formTitle">標題</label>
+                    <div class="formContent">
+                      <input id="title" type="text" title="請輸入標題" />
+                    </div>
+                  </div>
+                  <div class="formGrp">
+                    <div class="formTitle">起始日期</div>
+                    <div class="formContent">
+                      <div class="datePick">
+                        <input name="" type="date" value="" class="calendar" placeholder="開始日期" title="開始日期" />
+                      </div>
+                      <div class="datePick">
+                        <input name="" type="date" value="" class="calendar" placeholder="結束日期" title="結束日期" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="formGrp">
+                    <label for="selectSample" class="formTitle">選單</label>
+                    <div class="formContent">
+                      <select id="selectSample" name="">
+                        <option value="">全部</option>
+                        <option value="">視覺藝術（藝術品與美術）</option>
+                        <option value="">工藝（不含古物、古董）</option>
+                        <option value="">設計</option>
+                        <option value="">古典與傳統音樂</option>
+                        <option value="">流行音樂</option>
+                        <option value="">戲劇</option>
+                        <option value="">舞蹈</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="btnGrp formInline">
+                    <button type="button" class="btn btnReset">清除</button>
+                    <button type="button" class="btn btnSubmit">送出</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!-- 條件查詢 end -->
+
+
             <div class="">
               <table class="tableSprite ">
                 <!-- 無障礙 caption 標題預設隱藏 -->
