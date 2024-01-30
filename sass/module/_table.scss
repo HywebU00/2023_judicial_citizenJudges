@@ -32,6 +32,9 @@ table {
       word-break: break-all;
     }
   }
+  td.nowrap {
+    white-space: nowrap;
+  }
   th {
     background-color: #f3f3f3;
     color: #333;
