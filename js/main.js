@@ -1351,11 +1351,13 @@ function fontSize() {
 
   // --- 初始化 字體大小設定
   window.addEventListener('load', function (e) {
-    const _cookie = readCookie('FontSize');
+    let _cookie = readCookie('FontSize');
     // --- 如果沒有_cookie 則預設值為'medium'
     if (_cookie == null) {
       _cookie = 'medium';
+      createCookie('FontSize', _cookie, 356);
     }
+
     document.querySelectorAll(`.${_cookie}`).forEach((i) => {
       i.classList.add('active');
       body.classList.add(`${_cookie}Size`);
