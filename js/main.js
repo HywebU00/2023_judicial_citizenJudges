@@ -1210,7 +1210,7 @@ class SelectSlider {
   sliderClick() {
     this.name.forEach((i) => {
       i.addEventListener('click', (e) => {
-        e.preventDefault();
+        // e.preventDefault();
         const sliderItem = e.target.nextElementSibling;
         if (sliderItem === null) {
           return;
