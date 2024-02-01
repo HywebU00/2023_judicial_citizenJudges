@@ -13,8 +13,7 @@ tableAddDataAttributes({
 });
 
 // 全站字體
-// fontSize();
-
+fontSize();
 // 手風琴功能
 accordionFunction({
   accordion: '.searchAccordion .accordion',
